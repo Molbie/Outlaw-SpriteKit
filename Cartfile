@@ -1,0 +1,3 @@
+github "molbie/outlaw" "master"
+github "molbie/outlaw-coregraphics" "master"
+github "molbie/outlaw-simd" "master"

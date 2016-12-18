@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:OutlawSpriteKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/outlaw/Outlaw.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/outlaw-coregraphics/OutlawCoreGraphics.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/outlaw-simd/OutlawSimd.xcodeproj">
+   </FileRef>
+</Workspace>
