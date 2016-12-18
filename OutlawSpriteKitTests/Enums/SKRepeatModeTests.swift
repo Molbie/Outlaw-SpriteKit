@@ -16,10 +16,12 @@ import SpriteKit
 
 class SKRepeatModeTests: XCTestCase {
     func testStringInit() {
-        let clamp = SKRepeatMode(stringValue: "clamp")
+        typealias strings = SKRepeatMode.StringValues
+        
+        let clamp = SKRepeatMode(stringValue: strings.clamp)
         XCTAssertEqual(clamp, .clamp)
         
-        let loop = SKRepeatMode(stringValue: "loop")
+        let loop = SKRepeatMode(stringValue: strings.loop)
         XCTAssertEqual(loop, .loop)
         
         let invalid = SKRepeatMode(stringValue: "invalid")
@@ -27,10 +29,12 @@ class SKRepeatModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let clamp = SKRepeatMode(stringValue: "CLAMP")
+        typealias strings = SKRepeatMode.StringValues
+        
+        let clamp = SKRepeatMode(stringValue: strings.clamp.uppercased())
         XCTAssertEqual(clamp, .clamp)
         
-        let loop = SKRepeatMode(stringValue: "LOOP")
+        let loop = SKRepeatMode(stringValue: strings.loop.uppercased())
         XCTAssertEqual(loop, .loop)
         
         let invalid = SKRepeatMode(stringValue: "INVALID")
@@ -38,10 +42,12 @@ class SKRepeatModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKRepeatMode.StringValues
+        
         let clamp = SKRepeatMode.clamp
-        XCTAssertEqual(clamp.stringValue, "clamp")
+        XCTAssertEqual(clamp.stringValue, strings.clamp)
         
         let loop = SKRepeatMode.loop
-        XCTAssertEqual(loop.stringValue, "loop")
+        XCTAssertEqual(loop.stringValue, strings.loop)
     }
 }

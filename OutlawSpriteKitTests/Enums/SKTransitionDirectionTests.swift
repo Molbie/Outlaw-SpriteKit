@@ -16,16 +16,18 @@ import SpriteKit
 
 class SKTransitionDirectionTests: XCTestCase {
     func testStringInit() {
-        let up = SKTransitionDirection(stringValue: "up")
+        typealias strings = SKTransitionDirection.StringValues
+        
+        let up = SKTransitionDirection(stringValue: strings.up)
         XCTAssertEqual(up, .up)
         
-        let down = SKTransitionDirection(stringValue: "down")
+        let down = SKTransitionDirection(stringValue: strings.down)
         XCTAssertEqual(down, .down)
         
-        let right = SKTransitionDirection(stringValue: "right")
+        let right = SKTransitionDirection(stringValue: strings.right)
         XCTAssertEqual(right, .right)
         
-        let left = SKTransitionDirection(stringValue: "left")
+        let left = SKTransitionDirection(stringValue: strings.left)
         XCTAssertEqual(left, .left)
         
         let invalid = SKTransitionDirection(stringValue: "invalid")
@@ -33,16 +35,18 @@ class SKTransitionDirectionTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let up = SKTransitionDirection(stringValue: "UP")
+        typealias strings = SKTransitionDirection.StringValues
+        
+        let up = SKTransitionDirection(stringValue: strings.up.uppercased())
         XCTAssertEqual(up, .up)
         
-        let down = SKTransitionDirection(stringValue: "DOWN")
+        let down = SKTransitionDirection(stringValue: strings.down.uppercased())
         XCTAssertEqual(down, .down)
         
-        let right = SKTransitionDirection(stringValue: "RIGHT")
+        let right = SKTransitionDirection(stringValue: strings.right.uppercased())
         XCTAssertEqual(right, .right)
         
-        let left = SKTransitionDirection(stringValue: "LEFT")
+        let left = SKTransitionDirection(stringValue: strings.left.uppercased())
         XCTAssertEqual(left, .left)
         
         let invalid = SKTransitionDirection(stringValue: "INVALID")
@@ -50,16 +54,18 @@ class SKTransitionDirectionTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKTransitionDirection.StringValues
+        
         let up = SKTransitionDirection.up
-        XCTAssertEqual(up.stringValue, "up")
+        XCTAssertEqual(up.stringValue, strings.up)
         
         let down = SKTransitionDirection.down
-        XCTAssertEqual(down.stringValue, "down")
+        XCTAssertEqual(down.stringValue, strings.down)
         
         let right = SKTransitionDirection.right
-        XCTAssertEqual(right.stringValue, "right")
+        XCTAssertEqual(right.stringValue, strings.right)
         
         let left = SKTransitionDirection.left
-        XCTAssertEqual(left.stringValue, "left")
+        XCTAssertEqual(left.stringValue, strings.left)
     }
 }

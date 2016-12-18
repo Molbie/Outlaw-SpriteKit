@@ -11,25 +11,42 @@ import SpriteKit
 
 @available(OSX 10.10, *)
 public extension SKUniformType {
+    public struct StringValues {
+        public static let none = "none"
+        public static let float = "float"
+        public static let floatVector2 = "floatvector2"
+        public static let floatVector3 = "floatvector3"
+        public static let floatVector4 = "floatvector4"
+        public static let floatMatrix2 = "floatmatrix2"
+        public static let floatMatrix3 = "floatmatrix3"
+        public static let floatMatrix4 = "floatmatrix4"
+        public static let texture = "texture"
+    }
+}
+
+@available(OSX 10.10, *)
+public extension SKUniformType {
     public init?(stringValue: String) {
+        typealias strings = SKUniformType.StringValues
+        
         switch stringValue.lowercased() {
-            case "none":
+            case strings.none:
                 self = .none
-            case "float":
+            case strings.float:
                 self = .float
-            case "floatvector2":
+            case strings.floatVector2:
                 self = .floatVector2
-            case "floatvector3":
+            case strings.floatVector3:
                 self = .floatVector3
-            case "floatvector4":
+            case strings.floatVector4:
                 self = .floatVector4
-            case "floatmatrix2":
+            case strings.floatMatrix2:
                 self = .floatMatrix2
-            case "floatmatrix3":
+            case strings.floatMatrix3:
                 self = .floatMatrix3
-            case "floatmatrix4":
+            case strings.floatMatrix4:
                 self = .floatMatrix4
-            case "texture":
+            case strings.texture:
                 self = .texture
             default:
                 return nil
@@ -37,27 +54,28 @@ public extension SKUniformType {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKUniformType.StringValues
         
+        let result: String
         switch self {
             case .none:
-                result = "none"
+                result = strings.none
             case .float:
-                result = "float"
+                result = strings.float
             case .floatVector2:
-                result = "floatvector2"
+                result = strings.floatVector2
             case .floatVector3:
-                result = "floatvector3"
+                result = strings.floatVector3
             case .floatVector4:
-                result = "floatvector4"
+                result = strings.floatVector4
             case .floatMatrix2:
-                result = "floatmatrix2"
+                result = strings.floatMatrix2
             case .floatMatrix3:
-                result = "floatmatrix3"
+                result = strings.floatMatrix3
             case .floatMatrix4:
-                result = "floatmatrix4"
+                result = strings.floatMatrix4
             case .texture:
-                result = "texture"
+                result = strings.texture
         }
         
         return result

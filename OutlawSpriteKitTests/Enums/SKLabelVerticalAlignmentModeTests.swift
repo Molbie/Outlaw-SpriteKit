@@ -16,16 +16,18 @@ import SpriteKit
 
 class SKLabelVerticalAlignmentModeTests: XCTestCase {
     func testStringInit() {
-        let baseline = SKLabelVerticalAlignmentMode(stringValue: "baseline")
+        typealias strings = SKLabelVerticalAlignmentMode.StringValues
+        
+        let baseline = SKLabelVerticalAlignmentMode(stringValue: strings.baseline)
         XCTAssertEqual(baseline, .baseline)
         
-        let center = SKLabelVerticalAlignmentMode(stringValue: "center")
+        let center = SKLabelVerticalAlignmentMode(stringValue: strings.center)
         XCTAssertEqual(center, .center)
         
-        let top = SKLabelVerticalAlignmentMode(stringValue: "top")
+        let top = SKLabelVerticalAlignmentMode(stringValue: strings.top)
         XCTAssertEqual(top, .top)
         
-        let bottom = SKLabelVerticalAlignmentMode(stringValue: "bottom")
+        let bottom = SKLabelVerticalAlignmentMode(stringValue: strings.bottom)
         XCTAssertEqual(bottom, .bottom)
         
         let invalid = SKLabelVerticalAlignmentMode(stringValue: "invalid")
@@ -33,16 +35,18 @@ class SKLabelVerticalAlignmentModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let baseline = SKLabelVerticalAlignmentMode(stringValue: "BASELINE")
+        typealias strings = SKLabelVerticalAlignmentMode.StringValues
+        
+        let baseline = SKLabelVerticalAlignmentMode(stringValue: strings.baseline.uppercased())
         XCTAssertEqual(baseline, .baseline)
         
-        let center = SKLabelVerticalAlignmentMode(stringValue: "CENTER")
+        let center = SKLabelVerticalAlignmentMode(stringValue: strings.center.uppercased())
         XCTAssertEqual(center, .center)
         
-        let top = SKLabelVerticalAlignmentMode(stringValue: "TOP")
+        let top = SKLabelVerticalAlignmentMode(stringValue: strings.top.uppercased())
         XCTAssertEqual(top, .top)
         
-        let bottom = SKLabelVerticalAlignmentMode(stringValue: "BOTTOM")
+        let bottom = SKLabelVerticalAlignmentMode(stringValue: strings.bottom.uppercased())
         XCTAssertEqual(bottom, .bottom)
         
         let invalid = SKLabelVerticalAlignmentMode(stringValue: "INVALID")
@@ -50,16 +54,18 @@ class SKLabelVerticalAlignmentModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKLabelVerticalAlignmentMode.StringValues
+        
         let baseline = SKLabelVerticalAlignmentMode.baseline
-        XCTAssertEqual(baseline.stringValue, "baseline")
+        XCTAssertEqual(baseline.stringValue, strings.baseline)
         
         let center = SKLabelVerticalAlignmentMode.center
-        XCTAssertEqual(center.stringValue, "center")
+        XCTAssertEqual(center.stringValue, strings.center)
         
         let top = SKLabelVerticalAlignmentMode.top
-        XCTAssertEqual(top.stringValue, "top")
+        XCTAssertEqual(top.stringValue, strings.top)
         
         let bottom = SKLabelVerticalAlignmentMode.bottom
-        XCTAssertEqual(bottom.stringValue, "bottom")
+        XCTAssertEqual(bottom.stringValue, strings.bottom)
     }
 }

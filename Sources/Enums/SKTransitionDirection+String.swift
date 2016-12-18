@@ -10,15 +10,26 @@ import SpriteKit
 
 
 public extension SKTransitionDirection {
+    public struct StringValues {
+        public static let up = "up"
+        public static let down = "down"
+        public static let right = "right"
+        public static let left = "left"
+    }
+}
+
+public extension SKTransitionDirection {
     public init?(stringValue: String) {
+        typealias strings = SKTransitionDirection.StringValues
+        
         switch stringValue.lowercased() {
-            case "up":
+            case strings.up:
                 self = .up
-            case "down":
+            case strings.down:
                 self = .down
-            case "right":
+            case strings.right:
                 self = .right
-            case "left":
+            case strings.left:
                 self = .left
             default:
                 return nil
@@ -26,17 +37,18 @@ public extension SKTransitionDirection {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKTransitionDirection.StringValues
         
+        let result: String
         switch self {
             case .up:
-                result = "up"
+                result = strings.up
             case .down:
-                result = "down"
+                result = strings.down
             case .right:
-                result = "right"
+                result = strings.right
             case .left:
-                result = "left"
+                result = strings.left
         }
         
         return result

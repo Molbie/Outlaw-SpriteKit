@@ -16,129 +16,135 @@ import SpriteKit
 
 class SKPhysicsBodyTests: XCTestCase {
     func testSerializable() {
+        typealias keys = SKPhysicsBody.ExtractableKeys
+        
         let body = SKPhysicsBody()
         let data: [String: Any] = SKPhysicsBody.serialize(body)
-        let dataVelocity: [String: Any]? = data["velocity"] as? [String: Any]
+        let dataVelocity: [String: Any]? = data[keys.velocity] as? [String: Any]
         
-        XCTAssertEqual(body.affectedByGravity, data["affectedByGravity"] as? Bool)
-        XCTAssertEqual(body.allowsRotation, data["allowsRotation"] as? Bool)
-        XCTAssertEqual(body.isDynamic, data["isDynamic"] as? Bool)
-        XCTAssertEqual(body.mass, data["mass"] as? CGFloat)
-        XCTAssertEqual(body.density, data["density"] as? CGFloat)
-        XCTAssertEqual(body.friction, data["friction"] as? CGFloat)
-        XCTAssertEqual(body.restitution, data["restitution"] as? CGFloat)
-        XCTAssertEqual(body.linearDamping, data["linearDamping"] as? CGFloat)
-        XCTAssertEqual(body.angularDamping, data["angularDamping"] as? CGFloat)
-        XCTAssertEqual(body.categoryBitMask, data["categoryBitMask"] as? UInt32)
-        XCTAssertEqual(body.collisionBitMask, data["collisionBitMask"] as? UInt32)
-        XCTAssertEqual(body.usesPreciseCollisionDetection, data["usesPreciseCollisionDetection"] as? Bool)
-        XCTAssertEqual(body.contactTestBitMask, data["contactTestBitMask"] as? UInt32)
+        XCTAssertEqual(body.affectedByGravity, data[keys.affectedByGravity] as? Bool)
+        XCTAssertEqual(body.allowsRotation, data[keys.allowsRotation] as? Bool)
+        XCTAssertEqual(body.isDynamic, data[keys.isDynamic] as? Bool)
+        XCTAssertEqual(body.mass, data[keys.mass] as? CGFloat)
+        XCTAssertEqual(body.density, data[keys.density] as? CGFloat)
+        XCTAssertEqual(body.friction, data[keys.friction] as? CGFloat)
+        XCTAssertEqual(body.restitution, data[keys.restitution] as? CGFloat)
+        XCTAssertEqual(body.linearDamping, data[keys.linearDamping] as? CGFloat)
+        XCTAssertEqual(body.angularDamping, data[keys.angularDamping] as? CGFloat)
+        XCTAssertEqual(body.categoryBitMask, data[keys.categoryBitMask] as? UInt32)
+        XCTAssertEqual(body.collisionBitMask, data[keys.collisionBitMask] as? UInt32)
+        XCTAssertEqual(body.usesPreciseCollisionDetection, data[keys.usesPreciseCollisionDetection] as? Bool)
+        XCTAssertEqual(body.contactTestBitMask, data[keys.contactTestBitMask] as? UInt32)
         XCTAssertEqual(body.velocity.dx, dataVelocity?["dx"] as? CGFloat)
         XCTAssertEqual(body.velocity.dy, dataVelocity?["dy"] as? CGFloat)
-        XCTAssertEqual(body.angularVelocity, data["angularVelocity"] as? CGFloat)
-        XCTAssertEqual(body.isResting, data["isResting"] as? Bool)
+        XCTAssertEqual(body.angularVelocity, data[keys.angularVelocity] as? CGFloat)
+        XCTAssertEqual(body.isResting, data[keys.isResting] as? Bool)
         if #available(OSX 10.10, *) {
-            XCTAssertEqual(body.fieldBitMask, data["fieldBitMask"] as? UInt32)
-            XCTAssertEqual(body.charge, data["charge"] as? CGFloat)
-            XCTAssertEqual(body.pinned, data["pinned"] as? Bool)
+            XCTAssertEqual(body.fieldBitMask, data[keys.fieldBitMask] as? UInt32)
+            XCTAssertEqual(body.charge, data[keys.charge] as? CGFloat)
+            XCTAssertEqual(body.pinned, data[keys.pinned] as? Bool)
         }
     }
     
     func testUpdatableWithMass() {
+        typealias keys = SKPhysicsBody.ExtractableKeys
+        
         let body = SKPhysicsBody(circleOfRadius: 1.0)
         let dataVelocity: [String: CGFloat] = ["dx": 99.0, "dy": 99.9]
-        let data: [String: Any] = ["affectedByGravity": false,
-                                   "allowsRotation": false,
-                                   "isDynamic": false,
-                                   "mass": CGFloat(1.0),
-                                   //"density": CGFloat(1.0),
-                                   "friction": CGFloat(1.0),
-                                   "restitution": CGFloat(1.0),
-                                   "linearDamping": CGFloat(1.0),
-                                   "angularDamping": CGFloat(1.0),
-                                   "categoryBitMask": UInt32(1),
-                                   "collisionBitMask": UInt32(1),
-                                   "usesPreciseCollisionDetection": true,
-                                   "contactTestBitMask": UInt32(1),
-                                   "velocity": dataVelocity,
-                                   "angularVelocity": CGFloat(1.0),
-                                   "isResting": true,
-                                   "fieldBitMask": UInt32(1),
-                                   "charge": CGFloat(1.0),
-                                   "pinned": true]
+        let data: [String: Any] = [keys.affectedByGravity: false,
+                                   keys.allowsRotation: false,
+                                   keys.isDynamic: false,
+                                   keys.mass: CGFloat(1.0),
+                                   //keys.density: CGFloat(1.0),
+                                   keys.friction: CGFloat(1.0),
+                                   keys.restitution: CGFloat(1.0),
+                                   keys.linearDamping: CGFloat(1.0),
+                                   keys.angularDamping: CGFloat(1.0),
+                                   keys.categoryBitMask: UInt32(1),
+                                   keys.collisionBitMask: UInt32(1),
+                                   keys.usesPreciseCollisionDetection: true,
+                                   keys.contactTestBitMask: UInt32(1),
+                                   keys.velocity: dataVelocity,
+                                   keys.angularVelocity: CGFloat(1.0),
+                                   keys.isResting: true,
+                                   keys.fieldBitMask: UInt32(1),
+                                   keys.charge: CGFloat(1.0),
+                                   keys.pinned: true]
         
         try! SKPhysicsBody.update(body, with: data)
 
-        XCTAssertEqual(body.affectedByGravity, data["affectedByGravity"] as? Bool)
-        XCTAssertEqual(body.allowsRotation, data["allowsRotation"] as? Bool)
-        XCTAssertEqual(body.isDynamic, data["isDynamic"] as? Bool)
-        XCTAssertEqualWithAccuracy(body.mass, data["mass"] as! CGFloat, accuracy: 0.00001)
-//        XCTAssertEqual(body.density, data["density"] as? CGFloat)
-        XCTAssertEqual(body.friction, data["friction"] as? CGFloat)
-        XCTAssertEqual(body.restitution, data["restitution"] as? CGFloat)
-        XCTAssertEqual(body.linearDamping, data["linearDamping"] as? CGFloat)
-        XCTAssertEqual(body.angularDamping, data["angularDamping"] as? CGFloat)
-        XCTAssertEqual(body.categoryBitMask, data["categoryBitMask"] as? UInt32)
-        XCTAssertEqual(body.collisionBitMask, data["collisionBitMask"] as? UInt32)
-        XCTAssertEqual(body.usesPreciseCollisionDetection, data["usesPreciseCollisionDetection"] as? Bool)
-        XCTAssertEqual(body.contactTestBitMask, data["contactTestBitMask"] as? UInt32)
+        XCTAssertEqual(body.affectedByGravity, data[keys.affectedByGravity] as? Bool)
+        XCTAssertEqual(body.allowsRotation, data[keys.allowsRotation] as? Bool)
+        XCTAssertEqual(body.isDynamic, data[keys.isDynamic] as? Bool)
+        XCTAssertEqualWithAccuracy(body.mass, data[keys.mass] as! CGFloat, accuracy: 0.00001)
+//        XCTAssertEqual(body.density, data[keys.density] as? CGFloat)
+        XCTAssertEqual(body.friction, data[keys.friction] as? CGFloat)
+        XCTAssertEqual(body.restitution, data[keys.restitution] as? CGFloat)
+        XCTAssertEqual(body.linearDamping, data[keys.linearDamping] as? CGFloat)
+        XCTAssertEqual(body.angularDamping, data[keys.angularDamping] as? CGFloat)
+        XCTAssertEqual(body.categoryBitMask, data[keys.categoryBitMask] as? UInt32)
+        XCTAssertEqual(body.collisionBitMask, data[keys.collisionBitMask] as? UInt32)
+        XCTAssertEqual(body.usesPreciseCollisionDetection, data[keys.usesPreciseCollisionDetection] as? Bool)
+        XCTAssertEqual(body.contactTestBitMask, data[keys.contactTestBitMask] as? UInt32)
         XCTAssertEqualWithAccuracy(body.velocity.dx, dataVelocity["dx"]!, accuracy: 0.00001)
         XCTAssertEqualWithAccuracy(body.velocity.dy, dataVelocity["dy"]!, accuracy: 0.00001)
-        XCTAssertEqual(body.angularVelocity, data["angularVelocity"] as? CGFloat)
-        XCTAssertEqual(body.isResting, data["isResting"] as? Bool)
+        XCTAssertEqual(body.angularVelocity, data[keys.angularVelocity] as? CGFloat)
+        XCTAssertEqual(body.isResting, data[keys.isResting] as? Bool)
         if #available(OSX 10.10, *) {
-            XCTAssertEqual(body.fieldBitMask, data["fieldBitMask"] as? UInt32)
-            XCTAssertEqual(body.charge, data["charge"] as? CGFloat)
-            XCTAssertEqual(body.pinned, data["pinned"] as? Bool)
+            XCTAssertEqual(body.fieldBitMask, data[keys.fieldBitMask] as? UInt32)
+            XCTAssertEqual(body.charge, data[keys.charge] as? CGFloat)
+            XCTAssertEqual(body.pinned, data[keys.pinned] as? Bool)
         }
     }
     
     func testUpdatableWithDensity() {
+        typealias keys = SKPhysicsBody.ExtractableKeys
+        
         let body = SKPhysicsBody(circleOfRadius: 1.0)
         let dataVelocity: [String: CGFloat] = ["dx": 99.0, "dy": 99.9]
-        let data: [String: Any] = ["affectedByGravity": false,
-                                   "allowsRotation": false,
-                                   "isDynamic": false,
-                                   //"mass": CGFloat(1.0),
-                                   "density": CGFloat(1.0),
-                                   "friction": CGFloat(1.0),
-                                   "restitution": CGFloat(1.0),
-                                   "linearDamping": CGFloat(1.0),
-                                   "angularDamping": CGFloat(1.0),
-                                   "categoryBitMask": UInt32(1),
-                                   "collisionBitMask": UInt32(1),
-                                   "usesPreciseCollisionDetection": true,
-                                   "contactTestBitMask": UInt32(1),
-                                   "velocity": dataVelocity,
-                                   "angularVelocity": CGFloat(1.0),
-                                   "isResting": true,
-                                   "fieldBitMask": UInt32(1),
-                                   "charge": CGFloat(1.0),
-                                   "pinned": true]
+        let data: [String: Any] = [keys.affectedByGravity: false,
+                                   keys.allowsRotation: false,
+                                   keys.isDynamic: false,
+                                   //keys.mass: CGFloat(1.0),
+                                   keys.density: CGFloat(1.0),
+                                   keys.friction: CGFloat(1.0),
+                                   keys.restitution: CGFloat(1.0),
+                                   keys.linearDamping: CGFloat(1.0),
+                                   keys.angularDamping: CGFloat(1.0),
+                                   keys.categoryBitMask: UInt32(1),
+                                   keys.collisionBitMask: UInt32(1),
+                                   keys.usesPreciseCollisionDetection: true,
+                                   keys.contactTestBitMask: UInt32(1),
+                                   keys.velocity: dataVelocity,
+                                   keys.angularVelocity: CGFloat(1.0),
+                                   keys.isResting: true,
+                                   keys.fieldBitMask: UInt32(1),
+                                   keys.charge: CGFloat(1.0),
+                                   keys.pinned: true]
         
         try! SKPhysicsBody.update(body, with: data)
         
-        XCTAssertEqual(body.affectedByGravity, data["affectedByGravity"] as? Bool)
-        XCTAssertEqual(body.allowsRotation, data["allowsRotation"] as? Bool)
-        XCTAssertEqual(body.isDynamic, data["isDynamic"] as? Bool)
-//        XCTAssertEqualWithAccuracy(body.mass, data["mass"] as! CGFloat, accuracy: 0.00001)
-        XCTAssertEqual(body.density, data["density"] as? CGFloat)
-        XCTAssertEqual(body.friction, data["friction"] as? CGFloat)
-        XCTAssertEqual(body.restitution, data["restitution"] as? CGFloat)
-        XCTAssertEqual(body.linearDamping, data["linearDamping"] as? CGFloat)
-        XCTAssertEqual(body.angularDamping, data["angularDamping"] as? CGFloat)
-        XCTAssertEqual(body.categoryBitMask, data["categoryBitMask"] as? UInt32)
-        XCTAssertEqual(body.collisionBitMask, data["collisionBitMask"] as? UInt32)
-        XCTAssertEqual(body.usesPreciseCollisionDetection, data["usesPreciseCollisionDetection"] as? Bool)
-        XCTAssertEqual(body.contactTestBitMask, data["contactTestBitMask"] as? UInt32)
+        XCTAssertEqual(body.affectedByGravity, data[keys.affectedByGravity] as? Bool)
+        XCTAssertEqual(body.allowsRotation, data[keys.allowsRotation] as? Bool)
+        XCTAssertEqual(body.isDynamic, data[keys.isDynamic] as? Bool)
+//        XCTAssertEqualWithAccuracy(body.mass, data[keys.mass] as! CGFloat, accuracy: 0.00001)
+        XCTAssertEqual(body.density, data[keys.density] as? CGFloat)
+        XCTAssertEqual(body.friction, data[keys.friction] as? CGFloat)
+        XCTAssertEqual(body.restitution, data[keys.restitution] as? CGFloat)
+        XCTAssertEqual(body.linearDamping, data[keys.linearDamping] as? CGFloat)
+        XCTAssertEqual(body.angularDamping, data[keys.angularDamping] as? CGFloat)
+        XCTAssertEqual(body.categoryBitMask, data[keys.categoryBitMask] as? UInt32)
+        XCTAssertEqual(body.collisionBitMask, data[keys.collisionBitMask] as? UInt32)
+        XCTAssertEqual(body.usesPreciseCollisionDetection, data[keys.usesPreciseCollisionDetection] as? Bool)
+        XCTAssertEqual(body.contactTestBitMask, data[keys.contactTestBitMask] as? UInt32)
         XCTAssertEqualWithAccuracy(body.velocity.dx, dataVelocity["dx"]!, accuracy: 0.00001)
         XCTAssertEqualWithAccuracy(body.velocity.dy, dataVelocity["dy"]!, accuracy: 0.00001)
-        XCTAssertEqual(body.angularVelocity, data["angularVelocity"] as? CGFloat)
-        XCTAssertEqual(body.isResting, data["isResting"] as? Bool)
+        XCTAssertEqual(body.angularVelocity, data[keys.angularVelocity] as? CGFloat)
+        XCTAssertEqual(body.isResting, data[keys.isResting] as? Bool)
         if #available(OSX 10.10, *) {
-            XCTAssertEqual(body.fieldBitMask, data["fieldBitMask"] as? UInt32)
-            XCTAssertEqual(body.charge, data["charge"] as? CGFloat)
-            XCTAssertEqual(body.pinned, data["pinned"] as? Bool)
+            XCTAssertEqual(body.fieldBitMask, data[keys.fieldBitMask] as? UInt32)
+            XCTAssertEqual(body.charge, data[keys.charge] as? CGFloat)
+            XCTAssertEqual(body.pinned, data[keys.pinned] as? Bool)
         }
     }
 }

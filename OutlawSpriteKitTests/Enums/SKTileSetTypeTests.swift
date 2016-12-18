@@ -17,16 +17,18 @@ import SpriteKit
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 class SKTileSetTypeTests: XCTestCase {
     func testStringInit() {
-        let grid = SKTileSetType(stringValue: "grid")
+        typealias strings = SKTileSetType.StringValues
+        
+        let grid = SKTileSetType(stringValue: strings.grid)
         XCTAssertEqual(grid, .grid)
         
-        let isometric = SKTileSetType(stringValue: "isometric")
+        let isometric = SKTileSetType(stringValue: strings.isometric)
         XCTAssertEqual(isometric, .isometric)
         
-        let hexagonalFlat = SKTileSetType(stringValue: "hexagonalflat")
+        let hexagonalFlat = SKTileSetType(stringValue: strings.hexagonalFlat)
         XCTAssertEqual(hexagonalFlat, .hexagonalFlat)
         
-        let hexagonalPointy = SKTileSetType(stringValue: "hexagonalpointy")
+        let hexagonalPointy = SKTileSetType(stringValue: strings.hexagonalPointy)
         XCTAssertEqual(hexagonalPointy, .hexagonalPointy)
         
         let invalid = SKTileSetType(stringValue: "invalid")
@@ -34,16 +36,18 @@ class SKTileSetTypeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let grid = SKTileSetType(stringValue: "GRID")
+        typealias strings = SKTileSetType.StringValues
+        
+        let grid = SKTileSetType(stringValue: strings.grid.uppercased())
         XCTAssertEqual(grid, .grid)
         
-        let isometric = SKTileSetType(stringValue: "ISOMETRIC")
+        let isometric = SKTileSetType(stringValue: strings.isometric.uppercased())
         XCTAssertEqual(isometric, .isometric)
         
-        let hexagonalFlat = SKTileSetType(stringValue: "HEXAGONALFLAT")
+        let hexagonalFlat = SKTileSetType(stringValue: strings.hexagonalFlat.uppercased())
         XCTAssertEqual(hexagonalFlat, .hexagonalFlat)
         
-        let hexagonalPointy = SKTileSetType(stringValue: "HEXAGONALPOINTY")
+        let hexagonalPointy = SKTileSetType(stringValue: strings.hexagonalPointy.uppercased())
         XCTAssertEqual(hexagonalPointy, .hexagonalPointy)
         
         let invalid = SKTileSetType(stringValue: "INVALID")
@@ -51,16 +55,18 @@ class SKTileSetTypeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKTileSetType.StringValues
+        
         let grid = SKTileSetType.grid
-        XCTAssertEqual(grid.stringValue, "grid")
+        XCTAssertEqual(grid.stringValue, strings.grid)
         
         let isometric = SKTileSetType.isometric
-        XCTAssertEqual(isometric.stringValue, "isometric")
+        XCTAssertEqual(isometric.stringValue, strings.isometric)
         
         let hexagonalFlat = SKTileSetType.hexagonalFlat
-        XCTAssertEqual(hexagonalFlat.stringValue, "hexagonalflat")
+        XCTAssertEqual(hexagonalFlat.stringValue, strings.hexagonalFlat)
         
         let hexagonalPointy = SKTileSetType.hexagonalPointy
-        XCTAssertEqual(hexagonalPointy.stringValue, "hexagonalpointy")
+        XCTAssertEqual(hexagonalPointy.stringValue, strings.hexagonalPointy)
     }
 }

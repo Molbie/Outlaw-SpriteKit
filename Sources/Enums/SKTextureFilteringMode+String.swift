@@ -10,11 +10,20 @@ import SpriteKit
 
 
 public extension SKTextureFilteringMode {
+    public struct StringValues {
+        public static let nearest = "nearest"
+        public static let linear = "linear"
+    }
+}
+
+public extension SKTextureFilteringMode {
     public init?(stringValue: String) {
+        typealias strings = SKTextureFilteringMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "nearest":
+            case strings.nearest:
                 self = .nearest
-            case "linear":
+            case strings.linear:
                 self = .linear
             default:
                 return nil
@@ -22,13 +31,14 @@ public extension SKTextureFilteringMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKTextureFilteringMode.StringValues
         
+        let result: String
         switch self {
             case .nearest:
-                result = "nearest"
+                result = strings.nearest
             case .linear:
-                result = "linear"
+                result = strings.linear
         }
         
         return result

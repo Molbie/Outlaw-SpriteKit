@@ -10,21 +10,35 @@ import SpriteKit
 
 
 public extension SKBlendMode {
+    public struct StringValues {
+        public static let alpha = "alpha"
+        public static let add = "add"
+        public static let subtract = "subtract"
+        public static let multiply = "multiply"
+        public static let multiplyX2 = "multiplyx2"
+        public static let screen = "screen"
+        public static let replace = "replace"
+    }
+}
+
+public extension SKBlendMode {
     public init?(stringValue: String) {
+        typealias strings = SKBlendMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "alpha":
+            case strings.alpha:
                 self = .alpha
-            case "add":
+            case strings.add:
                 self = .add
-            case "subtract":
+            case strings.subtract:
                 self = .subtract
-            case "multiply":
+            case strings.multiply:
                 self = .multiply
-            case "multiplyx2":
+            case strings.multiplyX2:
                 self = .multiplyX2
-            case "screen":
+            case strings.screen:
                 self = .screen
-            case "replace":
+            case strings.replace:
                 self = .replace
             default:
                 return nil
@@ -32,23 +46,24 @@ public extension SKBlendMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKBlendMode.StringValues
         
+        let result: String
         switch self {
             case .alpha:
-                result = "alpha"
+                result = strings.alpha
             case .add:
-                result = "add"
+                result = strings.add
             case .subtract:
-                result = "subtract"
+                result = strings.subtract
             case .multiply:
-                result = "multiply"
+                result = strings.multiply
             case .multiplyX2:
-                result = "multiplyx2"
+                result = strings.multiplyX2
             case .screen:
-                result = "screen"
+                result = strings.screen
             case .replace:
-                result = "replace"
+                result = strings.replace
         }
         
         return result

@@ -10,15 +10,26 @@ import SpriteKit
 
 
 public extension SKSceneScaleMode {
+    public struct StringValues {
+        public static let fill = "fill"
+        public static let aspectFill = "aspectfill"
+        public static let aspectFit = "aspectfit"
+        public static let resizeFill = "resizefill"
+    }
+}
+
+public extension SKSceneScaleMode {
     public init?(stringValue: String) {
+        typealias strings = SKSceneScaleMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "fill":
+            case strings.fill:
                 self = .fill
-            case "aspectfill":
+            case strings.aspectFill:
                 self = .aspectFill
-            case "aspectfit":
+            case strings.aspectFit:
                 self = .aspectFit
-            case "resizefill":
+            case strings.resizeFill:
                 self = .resizeFill
             default:
                 return nil
@@ -26,17 +37,18 @@ public extension SKSceneScaleMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKSceneScaleMode.StringValues
         
+        let result: String
         switch self {
             case .fill:
-                result = "fill"
+                result = strings.fill
             case .aspectFill:
-                result = "aspectfill"
+                result = strings.aspectFill
             case .aspectFit:
-                result = "aspectfit"
+                result = strings.aspectFit
             case .resizeFill:
-                result = "resizefill"
+                result = strings.resizeFill
         }
         
         return result

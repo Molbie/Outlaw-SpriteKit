@@ -10,15 +10,26 @@ import SpriteKit
 
 
 public extension SKLabelVerticalAlignmentMode {
+    public struct StringValues {
+        public static let baseline = "baseline"
+        public static let center = "center"
+        public static let top = "top"
+        public static let bottom = "bottom"
+    }
+}
+
+public extension SKLabelVerticalAlignmentMode {
     public init?(stringValue: String) {
+        typealias strings = SKLabelVerticalAlignmentMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "baseline":
+            case strings.baseline:
                 self = .baseline
-            case "center":
+            case strings.center:
                 self = .center
-            case "top":
+            case strings.top:
                 self = .top
-            case "bottom":
+            case strings.bottom:
                 self = .bottom
             default:
                 return nil
@@ -26,17 +37,18 @@ public extension SKLabelVerticalAlignmentMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKLabelVerticalAlignmentMode.StringValues
         
+        let result: String
         switch self {
             case .baseline:
-                result = "baseline"
+                result = strings.baseline
             case .center:
-                result = "center"
+                result = strings.center
             case .top:
-                result = "top"
+                result = strings.top
             case .bottom:
-                result = "bottom"
+                result = strings.bottom
         }
         
         return result

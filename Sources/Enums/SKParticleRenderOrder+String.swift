@@ -11,13 +11,24 @@ import SpriteKit
 
 @available(iOS 9.0, OSX 10.11, *)
 public extension SKParticleRenderOrder {
+    public struct StringValues {
+        public static let oldestLast = "oldestlast"
+        public static let oldestFirst = "oldestfirst"
+        public static let dontCare = "dontcare"
+    }
+}
+
+@available(iOS 9.0, OSX 10.11, *)
+public extension SKParticleRenderOrder {
     public init?(stringValue: String) {
+        typealias strings = SKParticleRenderOrder.StringValues
+        
         switch stringValue.lowercased() {
-            case "oldestlast":
+            case strings.oldestLast:
                 self = .oldestLast
-            case "oldestfirst":
+            case strings.oldestFirst:
                 self = .oldestFirst
-            case "dontcare":
+            case strings.dontCare:
                 self = .dontCare
             default:
                 return nil
@@ -25,15 +36,16 @@ public extension SKParticleRenderOrder {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKParticleRenderOrder.StringValues
         
+        let result: String
         switch self {
             case .oldestLast:
-                result = "oldestlast"
+                result = strings.oldestLast
             case .oldestFirst:
-                result = "oldestfirst"
+                result = strings.oldestFirst
             case .dontCare:
-                result = "dontcare"
+                result = strings.dontCare
         }
         
         return result

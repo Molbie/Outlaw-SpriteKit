@@ -11,15 +11,27 @@ import SpriteKit
 
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 public extension SKTileSetType {
+    public struct StringValues {
+        public static let grid = "grid"
+        public static let isometric = "isometric"
+        public static let hexagonalFlat = "hexagonalflat"
+        public static let hexagonalPointy = "hexagonalpointy"
+    }
+}
+
+@available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
+public extension SKTileSetType {
     public init?(stringValue: String) {
+        typealias strings = SKTileSetType.StringValues
+        
         switch stringValue.lowercased() {
-            case "grid":
+            case strings.grid:
                 self = .grid
-            case "isometric":
+            case strings.isometric:
                 self = .isometric
-            case "hexagonalflat":
+            case strings.hexagonalFlat:
                 self = .hexagonalFlat
-            case "hexagonalpointy":
+            case strings.hexagonalPointy:
                 self = .hexagonalPointy
             default:
                 return nil
@@ -27,17 +39,18 @@ public extension SKTileSetType {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKTileSetType.StringValues
         
+        let result: String
         switch self {
             case .grid:
-                result = "grid"
+                result = strings.grid
             case .isometric:
-                result = "isometric"
+                result = strings.isometric
             case .hexagonalFlat:
-                result = "hexagonalflat"
+                result = strings.hexagonalFlat
             case .hexagonalPointy:
-                result = "hexagonalpointy"
+                result = strings.hexagonalPointy
         }
         
         return result

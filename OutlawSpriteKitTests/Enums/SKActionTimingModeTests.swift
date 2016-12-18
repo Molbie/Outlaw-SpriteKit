@@ -16,16 +16,18 @@ import SpriteKit
 
 class SKActionTimingModeTests: XCTestCase {
     func testStringInit() {
-        let linear = SKActionTimingMode(stringValue: "linear")
+        typealias strings = SKActionTimingMode.StringValues
+        
+        let linear = SKActionTimingMode(stringValue: strings.linear)
         XCTAssertEqual(linear, .linear)
         
-        let easeIn = SKActionTimingMode(stringValue: "easein")
+        let easeIn = SKActionTimingMode(stringValue: strings.easeIn)
         XCTAssertEqual(easeIn, .easeIn)
         
-        let easeOut = SKActionTimingMode(stringValue: "easeout")
+        let easeOut = SKActionTimingMode(stringValue: strings.easeOut)
         XCTAssertEqual(easeOut, .easeOut)
         
-        let easeInEaseOut = SKActionTimingMode(stringValue: "easeineaseout")
+        let easeInEaseOut = SKActionTimingMode(stringValue: strings.easeInEaseOut)
         XCTAssertEqual(easeInEaseOut, .easeInEaseOut)
         
         let invalid = SKActionTimingMode(stringValue: "invalid")
@@ -33,16 +35,18 @@ class SKActionTimingModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let linear = SKActionTimingMode(stringValue: "LINEAR")
+        typealias strings = SKActionTimingMode.StringValues
+        
+        let linear = SKActionTimingMode(stringValue: strings.linear.uppercased())
         XCTAssertEqual(linear, .linear)
         
-        let easeIn = SKActionTimingMode(stringValue: "EASEIN")
+        let easeIn = SKActionTimingMode(stringValue: strings.easeIn.uppercased())
         XCTAssertEqual(easeIn, .easeIn)
         
-        let easeOut = SKActionTimingMode(stringValue: "EASEOUT")
+        let easeOut = SKActionTimingMode(stringValue: strings.easeOut.uppercased())
         XCTAssertEqual(easeOut, .easeOut)
         
-        let easeInEaseOut = SKActionTimingMode(stringValue: "EASEINEASEOUT")
+        let easeInEaseOut = SKActionTimingMode(stringValue: strings.easeInEaseOut.uppercased())
         XCTAssertEqual(easeInEaseOut, .easeInEaseOut)
         
         let invalid = SKActionTimingMode(stringValue: "INVALID")
@@ -50,16 +54,18 @@ class SKActionTimingModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKActionTimingMode.StringValues
+        
         let linear = SKActionTimingMode.linear
-        XCTAssertEqual(linear.stringValue, "linear")
+        XCTAssertEqual(linear.stringValue, strings.linear)
         
         let easeIn = SKActionTimingMode.easeIn
-        XCTAssertEqual(easeIn.stringValue, "easein")
+        XCTAssertEqual(easeIn.stringValue, strings.easeIn)
         
         let easeOut = SKActionTimingMode.easeOut
-        XCTAssertEqual(easeOut.stringValue, "easeout")
+        XCTAssertEqual(easeOut.stringValue, strings.easeOut)
         
         let easeInEaseOut = SKActionTimingMode.easeInEaseOut
-        XCTAssertEqual(easeInEaseOut.stringValue, "easeineaseout")
+        XCTAssertEqual(easeInEaseOut.stringValue, strings.easeInEaseOut)
     }
 }

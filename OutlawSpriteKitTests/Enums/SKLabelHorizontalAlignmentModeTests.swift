@@ -16,13 +16,15 @@ import SpriteKit
 
 class SKLabelHorizontalAlignmentModeTests: XCTestCase {
     func testStringInit() {
-        let center = SKLabelHorizontalAlignmentMode(stringValue: "center")
+        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
+        
+        let center = SKLabelHorizontalAlignmentMode(stringValue: strings.center)
         XCTAssertEqual(center, .center)
         
-        let left = SKLabelHorizontalAlignmentMode(stringValue: "left")
+        let left = SKLabelHorizontalAlignmentMode(stringValue: strings.left)
         XCTAssertEqual(left, .left)
         
-        let right = SKLabelHorizontalAlignmentMode(stringValue: "right")
+        let right = SKLabelHorizontalAlignmentMode(stringValue: strings.right)
         XCTAssertEqual(right, .right)
         
         let invalid = SKLabelHorizontalAlignmentMode(stringValue: "invalid")
@@ -30,13 +32,15 @@ class SKLabelHorizontalAlignmentModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let center = SKLabelHorizontalAlignmentMode(stringValue: "CENTER")
+        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
+        
+        let center = SKLabelHorizontalAlignmentMode(stringValue: strings.center.uppercased())
         XCTAssertEqual(center, .center)
         
-        let left = SKLabelHorizontalAlignmentMode(stringValue: "LEFT")
+        let left = SKLabelHorizontalAlignmentMode(stringValue: strings.left.uppercased())
         XCTAssertEqual(left, .left)
         
-        let right = SKLabelHorizontalAlignmentMode(stringValue: "RIGHT")
+        let right = SKLabelHorizontalAlignmentMode(stringValue: strings.right.uppercased())
         XCTAssertEqual(right, .right)
         
         let invalid = SKLabelHorizontalAlignmentMode(stringValue: "INVALID")
@@ -44,13 +48,15 @@ class SKLabelHorizontalAlignmentModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
+        
         let center = SKLabelHorizontalAlignmentMode.center
-        XCTAssertEqual(center.stringValue, "center")
+        XCTAssertEqual(center.stringValue, strings.center)
         
         let left = SKLabelHorizontalAlignmentMode.left
-        XCTAssertEqual(left.stringValue, "left")
+        XCTAssertEqual(left.stringValue, strings.left)
         
         let right = SKLabelHorizontalAlignmentMode.right
-        XCTAssertEqual(right.stringValue, "right")
+        XCTAssertEqual(right.stringValue, strings.right)
     }
 }

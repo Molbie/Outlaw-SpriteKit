@@ -16,25 +16,27 @@ import SpriteKit
 
 class SKBlendModeTests: XCTestCase {
     func testStringInit() {
-        let alpha = SKBlendMode(stringValue: "alpha")
+        typealias strings = SKBlendMode.StringValues
+        
+        let alpha = SKBlendMode(stringValue: strings.alpha)
         XCTAssertEqual(alpha, .alpha)
         
-        let add = SKBlendMode(stringValue: "add")
+        let add = SKBlendMode(stringValue: strings.add)
         XCTAssertEqual(add, .add)
         
-        let subtract = SKBlendMode(stringValue: "subtract")
+        let subtract = SKBlendMode(stringValue: strings.subtract)
         XCTAssertEqual(subtract, .subtract)
         
-        let multiply = SKBlendMode(stringValue: "multiply")
+        let multiply = SKBlendMode(stringValue: strings.multiply)
         XCTAssertEqual(multiply, .multiply)
         
-        let multiplyX2 = SKBlendMode(stringValue: "multiplyx2")
+        let multiplyX2 = SKBlendMode(stringValue: strings.multiplyX2)
         XCTAssertEqual(multiplyX2, .multiplyX2)
         
-        let screen = SKBlendMode(stringValue: "screen")
+        let screen = SKBlendMode(stringValue: strings.screen)
         XCTAssertEqual(screen, .screen)
         
-        let replace = SKBlendMode(stringValue: "replace")
+        let replace = SKBlendMode(stringValue: strings.replace)
         XCTAssertEqual(replace, .replace)
         
         let invalid = SKBlendMode(stringValue: "invalid")
@@ -42,25 +44,27 @@ class SKBlendModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let alpha = SKBlendMode(stringValue: "ALPHA")
+        typealias strings = SKBlendMode.StringValues
+        
+        let alpha = SKBlendMode(stringValue: strings.alpha.uppercased())
         XCTAssertEqual(alpha, .alpha)
         
-        let add = SKBlendMode(stringValue: "ADD")
+        let add = SKBlendMode(stringValue: strings.add.uppercased())
         XCTAssertEqual(add, .add)
         
-        let subtract = SKBlendMode(stringValue: "SUBTRACT")
+        let subtract = SKBlendMode(stringValue: strings.subtract.uppercased())
         XCTAssertEqual(subtract, .subtract)
         
-        let multiply = SKBlendMode(stringValue: "MULTIPLY")
+        let multiply = SKBlendMode(stringValue: strings.multiply.uppercased())
         XCTAssertEqual(multiply, .multiply)
         
-        let multiplyX2 = SKBlendMode(stringValue: "MULTIPLYX2")
+        let multiplyX2 = SKBlendMode(stringValue: strings.multiplyX2.uppercased())
         XCTAssertEqual(multiplyX2, .multiplyX2)
         
-        let screen = SKBlendMode(stringValue: "SCREEN")
+        let screen = SKBlendMode(stringValue: strings.screen.uppercased())
         XCTAssertEqual(screen, .screen)
         
-        let replace = SKBlendMode(stringValue: "REPLACE")
+        let replace = SKBlendMode(stringValue: strings.replace.uppercased())
         XCTAssertEqual(replace, .replace)
         
         let invalid = SKBlendMode(stringValue: "INVALID")
@@ -68,25 +72,27 @@ class SKBlendModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKBlendMode.StringValues
+        
         let alpha = SKBlendMode.alpha
-        XCTAssertEqual(alpha.stringValue, "alpha")
+        XCTAssertEqual(alpha.stringValue, strings.alpha)
         
         let add = SKBlendMode.add
-        XCTAssertEqual(add.stringValue, "add")
+        XCTAssertEqual(add.stringValue, strings.add)
         
         let subtract = SKBlendMode.subtract
-        XCTAssertEqual(subtract.stringValue, "subtract")
+        XCTAssertEqual(subtract.stringValue, strings.subtract)
         
         let multiply = SKBlendMode.multiply
-        XCTAssertEqual(multiply.stringValue, "multiply")
+        XCTAssertEqual(multiply.stringValue, strings.multiply)
         
         let multiplyX2 = SKBlendMode.multiplyX2
-        XCTAssertEqual(multiplyX2.stringValue, "multiplyx2")
+        XCTAssertEqual(multiplyX2.stringValue, strings.multiplyX2)
         
         let screen = SKBlendMode.screen
-        XCTAssertEqual(screen.stringValue, "screen")
+        XCTAssertEqual(screen.stringValue, strings.screen)
         
         let replace = SKBlendMode.replace
-        XCTAssertEqual(replace.stringValue, "replace")
+        XCTAssertEqual(replace.stringValue, strings.replace)
     }
 }

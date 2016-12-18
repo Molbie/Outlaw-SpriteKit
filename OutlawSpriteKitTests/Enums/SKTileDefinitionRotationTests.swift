@@ -17,16 +17,18 @@ import SpriteKit
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 class SKTileDefinitionRotationTests: XCTestCase {
     func testStringInit() {
-        let rotation0 = SKTileDefinitionRotation(stringValue: "rotation0")
+        typealias strings = SKTileDefinitionRotation.StringValues
+        
+        let rotation0 = SKTileDefinitionRotation(stringValue: strings.rotation0)
         XCTAssertEqual(rotation0, .rotation0)
         
-        let rotation90 = SKTileDefinitionRotation(stringValue: "rotation90")
+        let rotation90 = SKTileDefinitionRotation(stringValue: strings.rotation90)
         XCTAssertEqual(rotation90, .rotation90)
         
-        let rotation180 = SKTileDefinitionRotation(stringValue: "rotation180")
+        let rotation180 = SKTileDefinitionRotation(stringValue: strings.rotation180)
         XCTAssertEqual(rotation180, .rotation180)
         
-        let rotation270 = SKTileDefinitionRotation(stringValue: "rotation270")
+        let rotation270 = SKTileDefinitionRotation(stringValue: strings.rotation270)
         XCTAssertEqual(rotation270, .rotation270)
         
         let invalid = SKTileDefinitionRotation(stringValue: "invalid")
@@ -34,16 +36,18 @@ class SKTileDefinitionRotationTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let rotation0 = SKTileDefinitionRotation(stringValue: "ROTATION0")
+        typealias strings = SKTileDefinitionRotation.StringValues
+        
+        let rotation0 = SKTileDefinitionRotation(stringValue: strings.rotation0.uppercased())
         XCTAssertEqual(rotation0, .rotation0)
         
-        let rotation90 = SKTileDefinitionRotation(stringValue: "ROTATION90")
+        let rotation90 = SKTileDefinitionRotation(stringValue: strings.rotation90.uppercased())
         XCTAssertEqual(rotation90, .rotation90)
         
-        let rotation180 = SKTileDefinitionRotation(stringValue: "ROTATION180")
+        let rotation180 = SKTileDefinitionRotation(stringValue: strings.rotation180.uppercased())
         XCTAssertEqual(rotation180, .rotation180)
         
-        let rotation270 = SKTileDefinitionRotation(stringValue: "ROTATION270")
+        let rotation270 = SKTileDefinitionRotation(stringValue: strings.rotation270.uppercased())
         XCTAssertEqual(rotation270, .rotation270)
         
         let invalid = SKTileDefinitionRotation(stringValue: "INVALID")
@@ -51,16 +55,18 @@ class SKTileDefinitionRotationTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKTileDefinitionRotation.StringValues
+        
         let rotation0 = SKTileDefinitionRotation.rotation0
-        XCTAssertEqual(rotation0.stringValue, "rotation0")
+        XCTAssertEqual(rotation0.stringValue, strings.rotation0)
         
         let rotation90 = SKTileDefinitionRotation.rotation90
-        XCTAssertEqual(rotation90.stringValue, "rotation90")
+        XCTAssertEqual(rotation90.stringValue, strings.rotation90)
         
         let rotation180 = SKTileDefinitionRotation.rotation180
-        XCTAssertEqual(rotation180.stringValue, "rotation180")
+        XCTAssertEqual(rotation180.stringValue, strings.rotation180)
         
         let rotation270 = SKTileDefinitionRotation.rotation270
-        XCTAssertEqual(rotation270.stringValue, "rotation270")
+        XCTAssertEqual(rotation270.stringValue, strings.rotation270)
     }
 }

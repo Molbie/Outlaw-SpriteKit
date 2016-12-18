@@ -15,15 +15,22 @@ import OutlawCoreGraphics
 //       "unrecognized selector" error sent to an instance of 
 //       "PKPhysicsWorld".
 
+public extension SKPhysicsWorld {
+    public struct ExtractableKeys {
+        public static let gravity = "gravity"
+        public static let speed = "speed"
+    }
+}
 
 // NOTE: because of the exception, use this class method to 
 //       serialize instead
 extension SKPhysicsWorld /* Serializable */ {
     public static func serialize(_ world: SKPhysicsWorld) -> [String: Any] {
-        var result = [String: Any]()
+        typealias keys = SKPhysicsWorld.ExtractableKeys
         
-        result["gravity" ] = world.gravity.serialized() as [String: CGFloat]
-        result["speed" ] = world.speed
+        var result = [String: Any]()
+        result[keys.gravity] = world.gravity.serialized() as [String: CGFloat]
+        result[keys.speed] = world.speed
         
         return result
     }
@@ -33,10 +40,12 @@ extension SKPhysicsWorld /* Serializable */ {
 //       update instead
 extension SKPhysicsWorld /* Updatable */ {
     public static func update(_ world: SKPhysicsWorld, with object: Extractable) throws {
-        if let gravity: CGVector = try? object.value(for: "gravity") {
+        typealias keys = SKPhysicsWorld.ExtractableKeys
+        
+        if let gravity: CGVector = try? object.value(for: keys.gravity) {
             world.gravity = gravity
         }
-        if let speed: CGFloat = try? object.value(for: "speed") {
+        if let speed: CGFloat = try? object.value(for: keys.speed) {
             world.speed = speed
         }
     }

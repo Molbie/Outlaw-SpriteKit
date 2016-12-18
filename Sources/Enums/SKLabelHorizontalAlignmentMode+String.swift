@@ -10,13 +10,23 @@ import SpriteKit
 
 
 public extension SKLabelHorizontalAlignmentMode {
+    public struct StringValues {
+        public static let center = "center"
+        public static let left = "left"
+        public static let right = "right"
+    }
+}
+
+public extension SKLabelHorizontalAlignmentMode {
     public init?(stringValue: String) {
+        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "center":
+            case strings.center:
                 self = .center
-            case "left":
+            case strings.left:
                 self = .left
-            case "right":
+            case strings.right:
                 self = .right
             default:
                 return nil
@@ -24,15 +34,16 @@ public extension SKLabelHorizontalAlignmentMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
         
+        let result: String
         switch self {
             case .center:
-                result = "center"
+                result = strings.center
             case .left:
-                result = "left"
+                result = strings.left
             case .right:
-                result = "right"
+                result = strings.right
         }
         
         return result

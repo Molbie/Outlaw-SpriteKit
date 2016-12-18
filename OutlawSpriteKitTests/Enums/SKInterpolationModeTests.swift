@@ -16,13 +16,15 @@ import SpriteKit
 
 class SKInterpolationModeTests: XCTestCase {
     func testStringInit() {
-        let linear = SKInterpolationMode(stringValue: "linear")
+        typealias strings = SKInterpolationMode.StringValues
+        
+        let linear = SKInterpolationMode(stringValue: strings.linear)
         XCTAssertEqual(linear, .linear)
         
-        let spline = SKInterpolationMode(stringValue: "spline")
+        let spline = SKInterpolationMode(stringValue: strings.spline)
         XCTAssertEqual(spline, .spline)
         
-        let step = SKInterpolationMode(stringValue: "step")
+        let step = SKInterpolationMode(stringValue: strings.step)
         XCTAssertEqual(step, .step)
         
         let invalid = SKInterpolationMode(stringValue: "invalid")
@@ -30,13 +32,15 @@ class SKInterpolationModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let linear = SKInterpolationMode(stringValue: "LINEAR")
+        typealias strings = SKInterpolationMode.StringValues
+        
+        let linear = SKInterpolationMode(stringValue: strings.linear.uppercased())
         XCTAssertEqual(linear, .linear)
         
-        let spline = SKInterpolationMode(stringValue: "SPLINE")
+        let spline = SKInterpolationMode(stringValue: strings.spline.uppercased())
         XCTAssertEqual(spline, .spline)
         
-        let step = SKInterpolationMode(stringValue: "STEP")
+        let step = SKInterpolationMode(stringValue: strings.step.uppercased())
         XCTAssertEqual(step, .step)
         
         let invalid = SKInterpolationMode(stringValue: "INVALID")
@@ -44,13 +48,15 @@ class SKInterpolationModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKInterpolationMode.StringValues
+        
         let linear = SKInterpolationMode.linear
-        XCTAssertEqual(linear.stringValue, "linear")
+        XCTAssertEqual(linear.stringValue, strings.linear)
         
         let spline = SKInterpolationMode.spline
-        XCTAssertEqual(spline.stringValue, "spline")
+        XCTAssertEqual(spline.stringValue, strings.spline)
         
         let step = SKInterpolationMode.step
-        XCTAssertEqual(step.stringValue, "step")
+        XCTAssertEqual(step.stringValue, strings.step)
     }
 }

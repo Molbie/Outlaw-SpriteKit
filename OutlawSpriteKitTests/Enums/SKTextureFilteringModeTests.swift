@@ -16,10 +16,12 @@ import SpriteKit
 
 class SKTextureFilteringModeTests: XCTestCase {
     func testStringInit() {
-        let nearest = SKTextureFilteringMode(stringValue: "nearest")
+        typealias strings = SKTextureFilteringMode.StringValues
+        
+        let nearest = SKTextureFilteringMode(stringValue: strings.nearest)
         XCTAssertEqual(nearest, .nearest)
         
-        let linear = SKTextureFilteringMode(stringValue: "linear")
+        let linear = SKTextureFilteringMode(stringValue: strings.linear)
         XCTAssertEqual(linear, .linear)
         
         let invalid = SKTextureFilteringMode(stringValue: "invalid")
@@ -27,10 +29,12 @@ class SKTextureFilteringModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let nearest = SKTextureFilteringMode(stringValue: "NEAREST")
+        typealias strings = SKTextureFilteringMode.StringValues
+        
+        let nearest = SKTextureFilteringMode(stringValue: strings.nearest.uppercased())
         XCTAssertEqual(nearest, .nearest)
         
-        let linear = SKTextureFilteringMode(stringValue: "LINEAR")
+        let linear = SKTextureFilteringMode(stringValue: strings.linear.uppercased())
         XCTAssertEqual(linear, .linear)
         
         let invalid = SKTextureFilteringMode(stringValue: "INVALID")
@@ -38,10 +42,12 @@ class SKTextureFilteringModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKTextureFilteringMode.StringValues
+        
         let nearest = SKTextureFilteringMode.nearest
-        XCTAssertEqual(nearest.stringValue, "nearest")
+        XCTAssertEqual(nearest.stringValue, strings.nearest)
         
         let linear = SKTextureFilteringMode.linear
-        XCTAssertEqual(linear.stringValue, "linear")
+        XCTAssertEqual(linear.stringValue, strings.linear)
     }
 }

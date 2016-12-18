@@ -16,16 +16,18 @@ import SpriteKit
 
 class SKSceneScaleModeTests: XCTestCase {
     func testStringInit() {
-        let fill = SKSceneScaleMode(stringValue: "fill")
+        typealias strings = SKSceneScaleMode.StringValues
+        
+        let fill = SKSceneScaleMode(stringValue: strings.fill)
         XCTAssertEqual(fill, .fill)
         
-        let aspectFill = SKSceneScaleMode(stringValue: "aspectfill")
+        let aspectFill = SKSceneScaleMode(stringValue: strings.aspectFill)
         XCTAssertEqual(aspectFill, .aspectFill)
         
-        let aspectFit = SKSceneScaleMode(stringValue: "aspectfit")
+        let aspectFit = SKSceneScaleMode(stringValue: strings.aspectFit)
         XCTAssertEqual(aspectFit, .aspectFit)
         
-        let resizeFill = SKSceneScaleMode(stringValue: "resizefill")
+        let resizeFill = SKSceneScaleMode(stringValue: strings.resizeFill)
         XCTAssertEqual(resizeFill, .resizeFill)
         
         let invalid = SKSceneScaleMode(stringValue: "invalid")
@@ -33,16 +35,18 @@ class SKSceneScaleModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let fill = SKSceneScaleMode(stringValue: "FILL")
+        typealias strings = SKSceneScaleMode.StringValues
+        
+        let fill = SKSceneScaleMode(stringValue: strings.fill.uppercased())
         XCTAssertEqual(fill, .fill)
         
-        let aspectFill = SKSceneScaleMode(stringValue: "ASPECTFILL")
+        let aspectFill = SKSceneScaleMode(stringValue: strings.aspectFill.uppercased())
         XCTAssertEqual(aspectFill, .aspectFill)
         
-        let aspectFit = SKSceneScaleMode(stringValue: "ASPECTFIT")
+        let aspectFit = SKSceneScaleMode(stringValue: strings.aspectFit.uppercased())
         XCTAssertEqual(aspectFit, .aspectFit)
         
-        let resizeFill = SKSceneScaleMode(stringValue: "RESIZEFILL")
+        let resizeFill = SKSceneScaleMode(stringValue: strings.resizeFill.uppercased())
         XCTAssertEqual(resizeFill, .resizeFill)
         
         let invalid = SKSceneScaleMode(stringValue: "INVALID")
@@ -50,16 +54,18 @@ class SKSceneScaleModeTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKSceneScaleMode.StringValues
+        
         let fill = SKSceneScaleMode.fill
-        XCTAssertEqual(fill.stringValue, "fill")
+        XCTAssertEqual(fill.stringValue, strings.fill)
         
         let aspectFill = SKSceneScaleMode.aspectFill
-        XCTAssertEqual(aspectFill.stringValue, "aspectfill")
+        XCTAssertEqual(aspectFill.stringValue, strings.aspectFill)
         
         let aspectFit = SKSceneScaleMode.aspectFit
-        XCTAssertEqual(aspectFit.stringValue, "aspectfit")
+        XCTAssertEqual(aspectFit.stringValue, strings.aspectFit)
         
         let resizeFill = SKSceneScaleMode.resizeFill
-        XCTAssertEqual(resizeFill.stringValue, "resizefill")
+        XCTAssertEqual(resizeFill.stringValue, strings.resizeFill)
     }
 }

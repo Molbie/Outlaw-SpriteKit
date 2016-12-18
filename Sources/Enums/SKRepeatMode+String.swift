@@ -10,11 +10,20 @@ import SpriteKit
 
 
 public extension SKRepeatMode {
+    public struct StringValues {
+        public static let clamp = "clamp"
+        public static let loop = "loop"
+    }
+}
+
+public extension SKRepeatMode {
     public init?(stringValue: String) {
+        typealias strings = SKRepeatMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "clamp":
+            case strings.clamp:
                 self = .clamp
-            case "loop":
+            case strings.loop:
                 self = .loop
             default:
                 return nil
@@ -22,13 +31,14 @@ public extension SKRepeatMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKRepeatMode.StringValues
         
+        let result: String
         switch self {
             case .clamp:
-                result = "clamp"
+                result = strings.clamp
             case .loop:
-                result = "loop"
+                result = strings.loop
         }
         
         return result

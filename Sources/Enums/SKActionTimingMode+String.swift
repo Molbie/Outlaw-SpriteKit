@@ -10,15 +10,26 @@ import SpriteKit
 
 
 public extension SKActionTimingMode {
+    public struct StringValues {
+        public static let linear = "linear"
+        public static let easeIn = "easein"
+        public static let easeOut = "easeout"
+        public static let easeInEaseOut = "easeineaseout"
+    }
+}
+
+public extension SKActionTimingMode {
     public init?(stringValue: String) {
+        typealias strings = SKActionTimingMode.StringValues
+        
         switch stringValue.lowercased() {
-            case "linear":
+            case strings.linear:
                 self = .linear
-            case "easein":
+            case strings.easeIn:
                 self = .easeIn
-            case "easeout":
+            case strings.easeOut:
                 self = .easeOut
-            case "easeineaseout":
+            case strings.easeInEaseOut:
                 self = .easeInEaseOut
             default:
                 return nil
@@ -26,17 +37,18 @@ public extension SKActionTimingMode {
     }
     
     public var stringValue: String {
-        let result: String
+        typealias strings = SKActionTimingMode.StringValues
         
+        let result: String
         switch self {
             case .linear:
-                result = "linear"
+                result = strings.linear
             case .easeIn:
-                result = "easein"
+                result = strings.easeIn
             case .easeOut:
-                result = "easeout"
+                result = strings.easeOut
             case .easeInEaseOut:
-                result = "easeineaseout"
+                result = strings.easeInEaseOut
         }
         
         return result

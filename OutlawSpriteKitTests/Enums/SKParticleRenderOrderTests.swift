@@ -17,13 +17,15 @@ import SpriteKit
 @available(iOS 9.0, OSX 10.11, *)
 class SKParticleRenderOrderTests: XCTestCase {
     func testStringInit() {
-        let oldestLast = SKParticleRenderOrder(stringValue: "oldestlast")
+        typealias strings = SKParticleRenderOrder.StringValues
+        
+        let oldestLast = SKParticleRenderOrder(stringValue: strings.oldestLast)
         XCTAssertEqual(oldestLast, .oldestLast)
         
-        let oldestFirst = SKParticleRenderOrder(stringValue: "oldestfirst")
+        let oldestFirst = SKParticleRenderOrder(stringValue: strings.oldestFirst)
         XCTAssertEqual(oldestFirst, .oldestFirst)
         
-        let dontCare = SKParticleRenderOrder(stringValue: "dontcare")
+        let dontCare = SKParticleRenderOrder(stringValue: strings.dontCare)
         XCTAssertEqual(dontCare, .dontCare)
         
         let invalid = SKParticleRenderOrder(stringValue: "invalid")
@@ -31,13 +33,15 @@ class SKParticleRenderOrderTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        let oldestLast = SKParticleRenderOrder(stringValue: "OLDESTLAST")
+        typealias strings = SKParticleRenderOrder.StringValues
+        
+        let oldestLast = SKParticleRenderOrder(stringValue: strings.oldestLast.uppercased())
         XCTAssertEqual(oldestLast, .oldestLast)
         
-        let oldestFirst = SKParticleRenderOrder(stringValue: "OLDESTFIRST")
+        let oldestFirst = SKParticleRenderOrder(stringValue: strings.oldestFirst.uppercased())
         XCTAssertEqual(oldestFirst, .oldestFirst)
         
-        let dontCare = SKParticleRenderOrder(stringValue: "DONTCARE")
+        let dontCare = SKParticleRenderOrder(stringValue: strings.dontCare.uppercased())
         XCTAssertEqual(dontCare, .dontCare)
         
         let invalid = SKParticleRenderOrder(stringValue: "INVALID")
@@ -45,13 +49,15 @@ class SKParticleRenderOrderTests: XCTestCase {
     }
     
     func testStringValue() {
+        typealias strings = SKParticleRenderOrder.StringValues
+        
         let oldestLast = SKParticleRenderOrder.oldestLast
-        XCTAssertEqual(oldestLast.stringValue, "oldestlast")
+        XCTAssertEqual(oldestLast.stringValue, strings.oldestLast)
         
         let oldestFirst = SKParticleRenderOrder.oldestFirst
-        XCTAssertEqual(oldestFirst.stringValue, "oldestfirst")
+        XCTAssertEqual(oldestFirst.stringValue, strings.oldestFirst)
         
         let dontCare = SKParticleRenderOrder.dontCare
-        XCTAssertEqual(dontCare.stringValue, "dontcare")
+        XCTAssertEqual(dontCare.stringValue, strings.dontCare)
     }
 }
