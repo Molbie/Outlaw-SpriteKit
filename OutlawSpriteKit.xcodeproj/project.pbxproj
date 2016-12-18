@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4DB74F1E06FABB00B0158C /* SKPhysicsBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */; };
 		AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */; };
 		AE89D45D1E065170003F5DE4 /* OutlawSpriteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4681E0652DA003F5DE4 /* Outlaw.framework */; };
@@ -45,6 +46,9 @@
 		AE89D4DA1E06710D003F5DE4 /* SKSceneScaleModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */; };
 		AE89D4DD1E067569003F5DE4 /* SKView+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4DC1E067569003F5DE4 /* SKView+Outlaw.swift */; };
 		AE89D4E01E06765B003F5DE4 /* SKViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */; };
+		AE89D4E41E067CF0003F5DE4 /* SKPhysicsBody+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4E21E067CF0003F5DE4 /* SKPhysicsBody+Outlaw.swift */; };
+		AE89D4E51E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4E31E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift */; };
+		AE89D4E81E067D76003F5DE4 /* SKPhysicsWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4E71E067D76003F5DE4 /* SKPhysicsWorldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsBodyTests.swift; sourceTree = "<group>"; };
 		AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OutlawSpriteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlawSpriteKit.h; sourceTree = "<group>"; };
 		AE89D4501E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +105,9 @@
 		AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSceneScaleModeTests.swift; sourceTree = "<group>"; };
 		AE89D4DC1E067569003F5DE4 /* SKView+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKView+Outlaw.swift"; sourceTree = "<group>"; };
 		AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKViewTests.swift; sourceTree = "<group>"; };
+		AE89D4E21E067CF0003F5DE4 /* SKPhysicsBody+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+Outlaw.swift"; sourceTree = "<group>"; };
+		AE89D4E31E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsWorld+Outlaw.swift"; sourceTree = "<group>"; };
+		AE89D4E71E067D76003F5DE4 /* SKPhysicsWorldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsWorldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 			children = (
 				AE89D4BE1E065C24003F5DE4 /* Enums */,
 				AE89D4DE1E06764B003F5DE4 /* Views */,
+				AE89D4E61E067D61003F5DE4 /* Physics */,
 				AE89D45C1E065170003F5DE4 /* Info.plist */,
 			);
 			path = OutlawSpriteKitTests;
@@ -172,6 +181,7 @@
 				AE89D4961E065602003F5DE4 /* SpriteKitTypes.swift */,
 				AE89D4741E065602003F5DE4 /* Enums */,
 				AE89D4DB1E067569003F5DE4 /* Views */,
+				AE89D4E11E067CF0003F5DE4 /* Physics */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -245,6 +255,24 @@
 				AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AE89D4E11E067CF0003F5DE4 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4E21E067CF0003F5DE4 /* SKPhysicsBody+Outlaw.swift */,
+				AE89D4E31E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		AE89D4E61E067D61003F5DE4 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4E71E067D76003F5DE4 /* SKPhysicsWorldTests.swift */,
+				AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */,
+			);
+			path = Physics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,9 +396,11 @@
 				AE89D4A21E065602003F5DE4 /* SKTextureFilteringMode+String.swift in Sources */,
 				AE89D4A61E065602003F5DE4 /* SKUniformType+String.swift in Sources */,
 				AE89D4A41E065602003F5DE4 /* SKTileSetType+String.swift in Sources */,
+				AE89D4E51E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift in Sources */,
 				AE89D4991E065602003F5DE4 /* SKActionTimingMode+String.swift in Sources */,
 				AE89D49B1E065602003F5DE4 /* SKBlendMode+String.swift in Sources */,
 				AE89D49D1E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift in Sources */,
+				AE89D4E41E067CF0003F5DE4 /* SKPhysicsBody+Outlaw.swift in Sources */,
 				AE89D49E1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift in Sources */,
 				AE89D4A51E065602003F5DE4 /* SKTransitionDirection+String.swift in Sources */,
 				AE89D4A31E065602003F5DE4 /* SKTileDefinitionRotation+String.swift in Sources */,
@@ -382,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE89D4E81E067D76003F5DE4 /* SKPhysicsWorldTests.swift in Sources */,
 				AE89D4C01E065C33003F5DE4 /* SKActionTimingModeTests.swift in Sources */,
 				AE89D4CA1E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */,
 				AE89D4D21E066892003F5DE4 /* SKTileDefinitionRotationTests.swift in Sources */,
@@ -395,6 +426,7 @@
 				AE89D4D41E066973003F5DE4 /* SKTileSetTypeTests.swift in Sources */,
 				AE89D4E01E06765B003F5DE4 /* SKViewTests.swift in Sources */,
 				AE89D4C61E06639E003F5DE4 /* SKInterpolationModeTests.swift in Sources */,
+				AE4DB74F1E06FABB00B0158C /* SKPhysicsBodyTests.swift in Sources */,
 				AE89D4D01E066711003F5DE4 /* SKBlendModeTests.swift in Sources */,
 				AE89D4CC1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift in Sources */,
 			);
