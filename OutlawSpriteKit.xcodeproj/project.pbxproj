@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */; };
-		AE89D45B1E065170003F5DE4 /* OutlawSpriteKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D45A1E065170003F5DE4 /* OutlawSpriteKitTests.swift */; };
 		AE89D45D1E065170003F5DE4 /* OutlawSpriteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4681E0652DA003F5DE4 /* Outlaw.framework */; };
 		AE89D46C1E0652DA003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */; };
@@ -16,6 +15,34 @@
 		AE89D4711E065336003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D46E1E065336003F5DE4 /* Outlaw.framework */; };
 		AE89D4721E065336003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */; };
 		AE89D4731E065336003F5DE4 /* OutlawSimd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4701E065336003F5DE4 /* OutlawSimd.framework */; };
+		AE89D4991E065602003F5DE4 /* SKActionTimingMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4751E065602003F5DE4 /* SKActionTimingMode+String.swift */; };
+		AE89D49A1E065602003F5DE4 /* SKAttributeType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4761E065602003F5DE4 /* SKAttributeType+String.swift */; };
+		AE89D49B1E065602003F5DE4 /* SKBlendMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4771E065602003F5DE4 /* SKBlendMode+String.swift */; };
+		AE89D49C1E065602003F5DE4 /* SKInterpolationMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4781E065602003F5DE4 /* SKInterpolationMode+String.swift */; };
+		AE89D49D1E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4791E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift */; };
+		AE89D49E1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47A1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift */; };
+		AE89D49F1E065602003F5DE4 /* SKParticleRenderOrder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47B1E065602003F5DE4 /* SKParticleRenderOrder+String.swift */; };
+		AE89D4A01E065602003F5DE4 /* SKRepeatMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47C1E065602003F5DE4 /* SKRepeatMode+String.swift */; };
+		AE89D4A11E065602003F5DE4 /* SKSceneScaleMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47D1E065602003F5DE4 /* SKSceneScaleMode+String.swift */; };
+		AE89D4A21E065602003F5DE4 /* SKTextureFilteringMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47E1E065602003F5DE4 /* SKTextureFilteringMode+String.swift */; };
+		AE89D4A31E065602003F5DE4 /* SKTileDefinitionRotation+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D47F1E065602003F5DE4 /* SKTileDefinitionRotation+String.swift */; };
+		AE89D4A41E065602003F5DE4 /* SKTileSetType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4801E065602003F5DE4 /* SKTileSetType+String.swift */; };
+		AE89D4A51E065602003F5DE4 /* SKTransitionDirection+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4811E065602003F5DE4 /* SKTransitionDirection+String.swift */; };
+		AE89D4A61E065602003F5DE4 /* SKUniformType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4821E065602003F5DE4 /* SKUniformType+String.swift */; };
+		AE89D4C01E065C33003F5DE4 /* SKActionTimingModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4BF1E065C33003F5DE4 /* SKActionTimingModeTests.swift */; };
+		AE89D4C21E065DDD003F5DE4 /* SKAttributeTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4C11E065DDD003F5DE4 /* SKAttributeTypeTests.swift */; };
+		AE89D4C41E066229003F5DE4 /* SKParticleRenderOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4C31E066229003F5DE4 /* SKParticleRenderOrderTests.swift */; };
+		AE89D4C61E06639E003F5DE4 /* SKInterpolationModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4C51E06639E003F5DE4 /* SKInterpolationModeTests.swift */; };
+		AE89D4C81E06645E003F5DE4 /* SKRepeatModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4C71E06645E003F5DE4 /* SKRepeatModeTests.swift */; };
+		AE89D4CA1E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4C91E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift */; };
+		AE89D4CC1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4CB1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift */; };
+		AE89D4CE1E066674003F5DE4 /* SKTextureFilteringModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4CD1E066674003F5DE4 /* SKTextureFilteringModeTests.swift */; };
+		AE89D4D01E066711003F5DE4 /* SKBlendModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4CF1E066711003F5DE4 /* SKBlendModeTests.swift */; };
+		AE89D4D21E066892003F5DE4 /* SKTileDefinitionRotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D11E066892003F5DE4 /* SKTileDefinitionRotationTests.swift */; };
+		AE89D4D41E066973003F5DE4 /* SKTileSetTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D31E066973003F5DE4 /* SKTileSetTypeTests.swift */; };
+		AE89D4D61E066E86003F5DE4 /* SKTransitionDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D51E066E86003F5DE4 /* SKTransitionDirectionTests.swift */; };
+		AE89D4D81E066F56003F5DE4 /* SKUniformTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D71E066F56003F5DE4 /* SKUniformTypeTests.swift */; };
+		AE89D4DA1E06710D003F5DE4 /* SKSceneScaleModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +60,42 @@
 		AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlawSpriteKit.h; sourceTree = "<group>"; };
 		AE89D4501E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE89D4551E065170003F5DE4 /* OutlawSpriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutlawSpriteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE89D45A1E065170003F5DE4 /* OutlawSpriteKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlawSpriteKitTests.swift; sourceTree = "<group>"; };
 		AE89D45C1E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE89D4681E0652DA003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Outlaw.framework; path = "Carthage/Checkouts/outlaw/build/Debug-iphoneos/Outlaw.framework"; sourceTree = "<group>"; };
 		AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawCoreGraphics.framework; path = "Carthage/Checkouts/outlaw-coregraphics/build/Debug-iphoneos/OutlawCoreGraphics.framework"; sourceTree = "<group>"; };
 		AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawSimd.framework; path = "Carthage/Checkouts/outlaw-simd/build/Debug-iphoneos/OutlawSimd.framework"; sourceTree = "<group>"; };
-		AE89D46E1E065336003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Outlaw.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawCoreGraphics.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE89D4701E065336003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawSimd.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46E1E065336003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4701E065336003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4751E065602003F5DE4 /* SKActionTimingMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKActionTimingMode+String.swift"; sourceTree = "<group>"; };
+		AE89D4761E065602003F5DE4 /* SKAttributeType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAttributeType+String.swift"; sourceTree = "<group>"; };
+		AE89D4771E065602003F5DE4 /* SKBlendMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKBlendMode+String.swift"; sourceTree = "<group>"; };
+		AE89D4781E065602003F5DE4 /* SKInterpolationMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKInterpolationMode+String.swift"; sourceTree = "<group>"; };
+		AE89D4791E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLabelHorizontalAlignmentMode+String.swift"; sourceTree = "<group>"; };
+		AE89D47A1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLabelVerticalAlignmentMode+String.swift"; sourceTree = "<group>"; };
+		AE89D47B1E065602003F5DE4 /* SKParticleRenderOrder+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKParticleRenderOrder+String.swift"; sourceTree = "<group>"; };
+		AE89D47C1E065602003F5DE4 /* SKRepeatMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKRepeatMode+String.swift"; sourceTree = "<group>"; };
+		AE89D47D1E065602003F5DE4 /* SKSceneScaleMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSceneScaleMode+String.swift"; sourceTree = "<group>"; };
+		AE89D47E1E065602003F5DE4 /* SKTextureFilteringMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTextureFilteringMode+String.swift"; sourceTree = "<group>"; };
+		AE89D47F1E065602003F5DE4 /* SKTileDefinitionRotation+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTileDefinitionRotation+String.swift"; sourceTree = "<group>"; };
+		AE89D4801E065602003F5DE4 /* SKTileSetType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTileSetType+String.swift"; sourceTree = "<group>"; };
+		AE89D4811E065602003F5DE4 /* SKTransitionDirection+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTransitionDirection+String.swift"; sourceTree = "<group>"; };
+		AE89D4821E065602003F5DE4 /* SKUniformType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKUniformType+String.swift"; sourceTree = "<group>"; };
+		AE89D4961E065602003F5DE4 /* SpriteKitTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitTypes.swift; sourceTree = "<group>"; };
+		AE89D4BF1E065C33003F5DE4 /* SKActionTimingModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKActionTimingModeTests.swift; sourceTree = "<group>"; };
+		AE89D4C11E065DDD003F5DE4 /* SKAttributeTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKAttributeTypeTests.swift; sourceTree = "<group>"; };
+		AE89D4C31E066229003F5DE4 /* SKParticleRenderOrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKParticleRenderOrderTests.swift; sourceTree = "<group>"; };
+		AE89D4C51E06639E003F5DE4 /* SKInterpolationModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKInterpolationModeTests.swift; sourceTree = "<group>"; };
+		AE89D4C71E06645E003F5DE4 /* SKRepeatModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRepeatModeTests.swift; sourceTree = "<group>"; };
+		AE89D4C91E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLabelHorizontalAlignmentModeTests.swift; sourceTree = "<group>"; };
+		AE89D4CB1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLabelVerticalAlignmentModeTests.swift; sourceTree = "<group>"; };
+		AE89D4CD1E066674003F5DE4 /* SKTextureFilteringModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureFilteringModeTests.swift; sourceTree = "<group>"; };
+		AE89D4CF1E066711003F5DE4 /* SKBlendModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBlendModeTests.swift; sourceTree = "<group>"; };
+		AE89D4D11E066892003F5DE4 /* SKTileDefinitionRotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTileDefinitionRotationTests.swift; sourceTree = "<group>"; };
+		AE89D4D31E066973003F5DE4 /* SKTileSetTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTileSetTypeTests.swift; sourceTree = "<group>"; };
+		AE89D4D51E066E86003F5DE4 /* SKTransitionDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTransitionDirectionTests.swift; sourceTree = "<group>"; };
+		AE89D4D71E066F56003F5DE4 /* SKUniformTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUniformTypeTests.swift; sourceTree = "<group>"; };
+		AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSceneScaleModeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +155,7 @@
 		AE89D4591E065170003F5DE4 /* OutlawSpriteKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE89D45A1E065170003F5DE4 /* OutlawSpriteKitTests.swift */,
+				AE89D4BE1E065C24003F5DE4 /* Enums */,
 				AE89D45C1E065170003F5DE4 /* Info.plist */,
 			);
 			path = OutlawSpriteKitTests;
@@ -109,6 +164,8 @@
 		AE89D4661E06518F003F5DE4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AE89D4961E065602003F5DE4 /* SpriteKitTypes.swift */,
+				AE89D4741E065602003F5DE4 /* Enums */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -124,6 +181,48 @@
 				AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE89D4741E065602003F5DE4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4751E065602003F5DE4 /* SKActionTimingMode+String.swift */,
+				AE89D4761E065602003F5DE4 /* SKAttributeType+String.swift */,
+				AE89D47B1E065602003F5DE4 /* SKParticleRenderOrder+String.swift */,
+				AE89D4781E065602003F5DE4 /* SKInterpolationMode+String.swift */,
+				AE89D47C1E065602003F5DE4 /* SKRepeatMode+String.swift */,
+				AE89D4791E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift */,
+				AE89D47A1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift */,
+				AE89D47E1E065602003F5DE4 /* SKTextureFilteringMode+String.swift */,
+				AE89D4771E065602003F5DE4 /* SKBlendMode+String.swift */,
+				AE89D47F1E065602003F5DE4 /* SKTileDefinitionRotation+String.swift */,
+				AE89D4801E065602003F5DE4 /* SKTileSetType+String.swift */,
+				AE89D4811E065602003F5DE4 /* SKTransitionDirection+String.swift */,
+				AE89D4821E065602003F5DE4 /* SKUniformType+String.swift */,
+				AE89D47D1E065602003F5DE4 /* SKSceneScaleMode+String.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		AE89D4BE1E065C24003F5DE4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4BF1E065C33003F5DE4 /* SKActionTimingModeTests.swift */,
+				AE89D4C11E065DDD003F5DE4 /* SKAttributeTypeTests.swift */,
+				AE89D4C31E066229003F5DE4 /* SKParticleRenderOrderTests.swift */,
+				AE89D4C51E06639E003F5DE4 /* SKInterpolationModeTests.swift */,
+				AE89D4C71E06645E003F5DE4 /* SKRepeatModeTests.swift */,
+				AE89D4C91E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift */,
+				AE89D4CB1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift */,
+				AE89D4CD1E066674003F5DE4 /* SKTextureFilteringModeTests.swift */,
+				AE89D4CF1E066711003F5DE4 /* SKBlendModeTests.swift */,
+				AE89D4D11E066892003F5DE4 /* SKTileDefinitionRotationTests.swift */,
+				AE89D4D31E066973003F5DE4 /* SKTileSetTypeTests.swift */,
+				AE89D4D51E066E86003F5DE4 /* SKTransitionDirectionTests.swift */,
+				AE89D4D71E066F56003F5DE4 /* SKUniformTypeTests.swift */,
+				AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +288,7 @@
 					AE89D44B1E065170003F5DE4 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = PWN4RN68X5;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					AE89D4541E065170003F5DE4 = {
@@ -238,6 +338,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE89D49C1E065602003F5DE4 /* SKInterpolationMode+String.swift in Sources */,
+				AE89D4A11E065602003F5DE4 /* SKSceneScaleMode+String.swift in Sources */,
+				AE89D49F1E065602003F5DE4 /* SKParticleRenderOrder+String.swift in Sources */,
+				AE89D4A01E065602003F5DE4 /* SKRepeatMode+String.swift in Sources */,
+				AE89D4A21E065602003F5DE4 /* SKTextureFilteringMode+String.swift in Sources */,
+				AE89D4A61E065602003F5DE4 /* SKUniformType+String.swift in Sources */,
+				AE89D4A41E065602003F5DE4 /* SKTileSetType+String.swift in Sources */,
+				AE89D4991E065602003F5DE4 /* SKActionTimingMode+String.swift in Sources */,
+				AE89D49B1E065602003F5DE4 /* SKBlendMode+String.swift in Sources */,
+				AE89D49D1E065602003F5DE4 /* SKLabelHorizontalAlignmentMode+String.swift in Sources */,
+				AE89D49E1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift in Sources */,
+				AE89D4A51E065602003F5DE4 /* SKTransitionDirection+String.swift in Sources */,
+				AE89D4A31E065602003F5DE4 /* SKTileDefinitionRotation+String.swift in Sources */,
+				AE89D49A1E065602003F5DE4 /* SKAttributeType+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +359,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE89D45B1E065170003F5DE4 /* OutlawSpriteKitTests.swift in Sources */,
+				AE89D4C01E065C33003F5DE4 /* SKActionTimingModeTests.swift in Sources */,
+				AE89D4CA1E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */,
+				AE89D4D21E066892003F5DE4 /* SKTileDefinitionRotationTests.swift in Sources */,
+				AE89D4D81E066F56003F5DE4 /* SKUniformTypeTests.swift in Sources */,
+				AE89D4C41E066229003F5DE4 /* SKParticleRenderOrderTests.swift in Sources */,
+				AE89D4D61E066E86003F5DE4 /* SKTransitionDirectionTests.swift in Sources */,
+				AE89D4DA1E06710D003F5DE4 /* SKSceneScaleModeTests.swift in Sources */,
+				AE89D4C21E065DDD003F5DE4 /* SKAttributeTypeTests.swift in Sources */,
+				AE89D4C81E06645E003F5DE4 /* SKRepeatModeTests.swift in Sources */,
+				AE89D4CE1E066674003F5DE4 /* SKTextureFilteringModeTests.swift in Sources */,
+				AE89D4D41E066973003F5DE4 /* SKTileSetTypeTests.swift in Sources */,
+				AE89D4C61E06639E003F5DE4 /* SKInterpolationModeTests.swift in Sources */,
+				AE89D4D01E066711003F5DE4 /* SKBlendModeTests.swift in Sources */,
+				AE89D4CC1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +499,7 @@
 		AE89D4611E065170003F5DE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PWN4RN68X5;
@@ -384,6 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.molbie.OutlawSpriteKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -391,6 +520,7 @@
 		AE89D4621E065170003F5DE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PWN4RN68X5;
@@ -410,6 +540,7 @@
 		AE89D4641E065170003F5DE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PWN4RN68X5;
 				INFOPLIST_FILE = OutlawSpriteKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
@@ -422,6 +553,7 @@
 		AE89D4651E065170003F5DE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PWN4RN68X5;
 				INFOPLIST_FILE = OutlawSpriteKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
