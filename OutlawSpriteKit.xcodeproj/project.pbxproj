@@ -43,6 +43,8 @@
 		AE89D4D61E066E86003F5DE4 /* SKTransitionDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D51E066E86003F5DE4 /* SKTransitionDirectionTests.swift */; };
 		AE89D4D81E066F56003F5DE4 /* SKUniformTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D71E066F56003F5DE4 /* SKUniformTypeTests.swift */; };
 		AE89D4DA1E06710D003F5DE4 /* SKSceneScaleModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */; };
+		AE89D4DD1E067569003F5DE4 /* SKView+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4DC1E067569003F5DE4 /* SKView+Outlaw.swift */; };
+		AE89D4E01E06765B003F5DE4 /* SKViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		AE89D4D51E066E86003F5DE4 /* SKTransitionDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTransitionDirectionTests.swift; sourceTree = "<group>"; };
 		AE89D4D71E066F56003F5DE4 /* SKUniformTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUniformTypeTests.swift; sourceTree = "<group>"; };
 		AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSceneScaleModeTests.swift; sourceTree = "<group>"; };
+		AE89D4DC1E067569003F5DE4 /* SKView+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKView+Outlaw.swift"; sourceTree = "<group>"; };
+		AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				AE89D4BE1E065C24003F5DE4 /* Enums */,
+				AE89D4DE1E06764B003F5DE4 /* Views */,
 				AE89D45C1E065170003F5DE4 /* Info.plist */,
 			);
 			path = OutlawSpriteKitTests;
@@ -166,6 +171,7 @@
 			children = (
 				AE89D4961E065602003F5DE4 /* SpriteKitTypes.swift */,
 				AE89D4741E065602003F5DE4 /* Enums */,
+				AE89D4DB1E067569003F5DE4 /* Views */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -223,6 +229,22 @@
 				AE89D4D91E06710D003F5DE4 /* SKSceneScaleModeTests.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		AE89D4DB1E067569003F5DE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4DC1E067569003F5DE4 /* SKView+Outlaw.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE89D4DE1E06764B003F5DE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D4DF1E06765B003F5DE4 /* SKViewTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE89D4DD1E067569003F5DE4 /* SKView+Outlaw.swift in Sources */,
 				AE89D49C1E065602003F5DE4 /* SKInterpolationMode+String.swift in Sources */,
 				AE89D4A11E065602003F5DE4 /* SKSceneScaleMode+String.swift in Sources */,
 				AE89D49F1E065602003F5DE4 /* SKParticleRenderOrder+String.swift in Sources */,
@@ -370,6 +393,7 @@
 				AE89D4C81E06645E003F5DE4 /* SKRepeatModeTests.swift in Sources */,
 				AE89D4CE1E066674003F5DE4 /* SKTextureFilteringModeTests.swift in Sources */,
 				AE89D4D41E066973003F5DE4 /* SKTileSetTypeTests.swift in Sources */,
+				AE89D4E01E06765B003F5DE4 /* SKViewTests.swift in Sources */,
 				AE89D4C61E06639E003F5DE4 /* SKInterpolationModeTests.swift in Sources */,
 				AE89D4D01E066711003F5DE4 /* SKBlendModeTests.swift in Sources */,
 				AE89D4CC1E0665A6003F5DE4 /* SKLabelVerticalAlignmentModeTests.swift in Sources */,
