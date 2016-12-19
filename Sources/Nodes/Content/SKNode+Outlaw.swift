@@ -72,8 +72,8 @@ extension SKNode: Serializable {
                                 switch self {
                                     case let node as SKCameraNode:
                                         return node.serializedCameraNode(withChildren: withChildren)
-//                                    case let node as SKAudioNode:
-//                                        return node.serializedAudioNode(withChildren: withChildren)
+                                    case let node as SKAudioNode:
+                                        return node.serializedAudioNode(withChildren: withChildren)
                                     default:
                                         return self.serializedNode(withChildren: withChildren)
                                 }
@@ -119,12 +119,12 @@ extension SKNode: Updatable {
                         default:
                             if #available(iOS 9.0, OSX 10.11, *) {
                                 switch self {
-                                case let node as SKCameraNode:
-                                    try node.updateCameraNode(with: object)
-    //                            case let node as SKAudioNode:
-    //                                try node.updateAudioNode(with: object)
-                                default:
-                                    try self.updateNode(with: object)
+                                    case let node as SKCameraNode:
+                                        try node.updateCameraNode(with: object)
+                                    case let node as SKAudioNode:
+                                        try node.updateAudioNode(with: object)
+                                    default:
+                                        try self.updateNode(with: object)
                                 }
                             }
                             else {

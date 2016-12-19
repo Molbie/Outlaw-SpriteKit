@@ -67,6 +67,7 @@
 		AEBDC2891E088C4B00EB1929 /* SKLightNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC2871E088C4B00EB1929 /* SKLightNode+Outlaw.swift */; };
 		AEBDC28D1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC28B1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift */; };
 		AEBDC28E1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC28C1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift */; };
+		AEBDC2911E08A9E100EB1929 /* SKAudioNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC2901E08A9E100EB1929 /* SKAudioNode+Outlaw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		AEBDC2871E088C4B00EB1929 /* SKLightNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLightNode+Outlaw.swift"; sourceTree = "<group>"; };
 		AEBDC28B1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEmitterNode+Outlaw.swift"; sourceTree = "<group>"; };
 		AEBDC28C1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKKeyframeSequence+Outlaw.swift"; sourceTree = "<group>"; };
+		AEBDC2901E08A9E100EB1929 /* SKAudioNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAudioNode+Outlaw.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		AE837CC31E07B54E00E31EAC /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				AEBDC28F1E08A9E100EB1929 /* Audio */,
 				AE837CC71E07B54E00E31EAC /* Constraints */,
 				AE837CF31E07BEC800E31EAC /* Content */,
 				AE837D0B1E07D9A700E31EAC /* Display */,
@@ -397,6 +400,14 @@
 			path = Particles;
 			sourceTree = "<group>";
 		};
+		AEBDC28F1E08A9E100EB1929 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDC2901E08A9E100EB1929 /* SKAudioNode+Outlaw.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -518,6 +529,7 @@
 				AE89D4A11E065602003F5DE4 /* SKSceneScaleMode+String.swift in Sources */,
 				AEBDC28E1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift in Sources */,
 				AE89D49F1E065602003F5DE4 /* SKParticleRenderOrder+String.swift in Sources */,
+				AEBDC2911E08A9E100EB1929 /* SKAudioNode+Outlaw.swift in Sources */,
 				AE89D4A01E065602003F5DE4 /* SKRepeatMode+String.swift in Sources */,
 				AE89D4A21E065602003F5DE4 /* SKTextureFilteringMode+String.swift in Sources */,
 				AE89D4A61E065602003F5DE4 /* SKUniformType+String.swift in Sources */,
