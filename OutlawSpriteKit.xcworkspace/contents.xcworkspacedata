@@ -13,4 +13,10 @@
    <FileRef
       location = "group:Carthage/Checkouts/outlaw-simd/OutlawSimd.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/outlaw-appkit/OutlawAppKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/outlaw-uikit/OutlawUIKit.xcodeproj">
+   </FileRef>
 </Workspace>

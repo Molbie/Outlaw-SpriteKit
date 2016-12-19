@@ -10,6 +10,13 @@
 		AE4DB74F1E06FABB00B0158C /* SKPhysicsBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */; };
 		AE837CE11E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CC81E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift */; };
 		AE837CF21E07B72400E31EAC /* SKReachConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */; };
+		AE837CF71E07BEC800E31EAC /* SKEffectNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CF41E07BEC800E31EAC /* SKEffectNode+Outlaw.swift */; };
+		AE837CF81E07BEC800E31EAC /* SKNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CF51E07BEC800E31EAC /* SKNode+Outlaw.swift */; };
+		AE837CF91E07BEC800E31EAC /* SKScene+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CF61E07BEC800E31EAC /* SKScene+Outlaw.swift */; };
+		AE837D041E07D2B100E31EAC /* OutlawAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */; };
+		AE837D061E07D2B600E31EAC /* OutlawUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */; };
+		AE837D091E07D31600E31EAC /* OutlawAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D071E07D31600E31EAC /* OutlawAppKit.framework */; };
+		AE837D0A1E07D31600E31EAC /* OutlawUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D081E07D31600E31EAC /* OutlawUIKit.framework */; };
 		AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */; };
 		AE89D45D1E065170003F5DE4 /* OutlawSpriteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4681E0652DA003F5DE4 /* Outlaw.framework */; };
@@ -67,14 +74,21 @@
 		AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsBodyTests.swift; sourceTree = "<group>"; };
 		AE837CC81E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKReachConstraints+Outlaw.swift"; sourceTree = "<group>"; };
 		AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKReachConstraintsTests.swift; sourceTree = "<group>"; };
+		AE837CF41E07BEC800E31EAC /* SKEffectNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEffectNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE837CF51E07BEC800E31EAC /* SKNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE837CF61E07BEC800E31EAC /* SKScene+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+Outlaw.swift"; sourceTree = "<group>"; };
+		AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawAppKit.framework; path = OutlawAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawUIKit.framework; path = OutlawUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D071E07D31600E31EAC /* OutlawAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawAppKit.framework; path = OutlawAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D081E07D31600E31EAC /* OutlawUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawUIKit.framework; path = OutlawUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OutlawSpriteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlawSpriteKit.h; sourceTree = "<group>"; };
 		AE89D4501E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE89D4551E065170003F5DE4 /* OutlawSpriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutlawSpriteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D45C1E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE89D4681E0652DA003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Outlaw.framework; path = "Carthage/Checkouts/outlaw/build/Debug-iphoneos/Outlaw.framework"; sourceTree = "<group>"; };
-		AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawCoreGraphics.framework; path = "Carthage/Checkouts/outlaw-coregraphics/build/Debug-iphoneos/OutlawCoreGraphics.framework"; sourceTree = "<group>"; };
-		AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawSimd.framework; path = "Carthage/Checkouts/outlaw-simd/build/Debug-iphoneos/OutlawSimd.framework"; sourceTree = "<group>"; };
+		AE89D4681E0652DA003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Outlaw.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawCoreGraphics.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OutlawSimd.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D46E1E065336003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D4701E065336003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE837D061E07D2B600E31EAC /* OutlawUIKit.framework in Frameworks */,
+				AE837D041E07D2B100E31EAC /* OutlawAppKit.framework in Frameworks */,
 				AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */,
 				AE89D46C1E0652DA003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */,
 				AE89D46D1E0652DA003F5DE4 /* OutlawSimd.framework in Frameworks */,
@@ -129,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE837D091E07D31600E31EAC /* OutlawAppKit.framework in Frameworks */,
+				AE837D0A1E07D31600E31EAC /* OutlawUIKit.framework in Frameworks */,
 				AE89D4711E065336003F5DE4 /* Outlaw.framework in Frameworks */,
 				AE89D4721E065336003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */,
 				AE89D4731E065336003F5DE4 /* OutlawSimd.framework in Frameworks */,
@@ -142,6 +160,7 @@
 		AE837CC31E07B54E00E31EAC /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				AE837CF31E07BEC800E31EAC /* Content */,
 				AE837CC71E07B54E00E31EAC /* Constraints */,
 			);
 			path = Nodes;
@@ -169,6 +188,16 @@
 				AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */,
 			);
 			path = Constraints;
+			sourceTree = "<group>";
+		};
+		AE837CF31E07BEC800E31EAC /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE837CF51E07BEC800E31EAC /* SKNode+Outlaw.swift */,
+				AE837CF41E07BEC800E31EAC /* SKEffectNode+Outlaw.swift */,
+				AE837CF61E07BEC800E31EAC /* SKScene+Outlaw.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		AE89D4421E065170003F5DE4 = {
@@ -227,6 +256,10 @@
 		AE89D4671E0652DA003F5DE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE837D071E07D31600E31EAC /* OutlawAppKit.framework */,
+				AE837D081E07D31600E31EAC /* OutlawUIKit.framework */,
+				AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */,
+				AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */,
 				AE89D46E1E065336003F5DE4 /* Outlaw.framework */,
 				AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */,
 				AE89D4701E065336003F5DE4 /* OutlawSimd.framework */,
@@ -434,7 +467,9 @@
 				AE89D4A01E065602003F5DE4 /* SKRepeatMode+String.swift in Sources */,
 				AE89D4A21E065602003F5DE4 /* SKTextureFilteringMode+String.swift in Sources */,
 				AE89D4A61E065602003F5DE4 /* SKUniformType+String.swift in Sources */,
+				AE837CF91E07BEC800E31EAC /* SKScene+Outlaw.swift in Sources */,
 				AE89D4A41E065602003F5DE4 /* SKTileSetType+String.swift in Sources */,
+				AE837CF81E07BEC800E31EAC /* SKNode+Outlaw.swift in Sources */,
 				AE89D4E51E067CF0003F5DE4 /* SKPhysicsWorld+Outlaw.swift in Sources */,
 				AE89D4991E065602003F5DE4 /* SKActionTimingMode+String.swift in Sources */,
 				AE89D49B1E065602003F5DE4 /* SKBlendMode+String.swift in Sources */,
@@ -443,6 +478,7 @@
 				AE89D49E1E065602003F5DE4 /* SKLabelVerticalAlignmentMode+String.swift in Sources */,
 				AE89D4A51E065602003F5DE4 /* SKTransitionDirection+String.swift in Sources */,
 				AE89D4A31E065602003F5DE4 /* SKTileDefinitionRotation+String.swift in Sources */,
+				AE837CF71E07BEC800E31EAC /* SKEffectNode+Outlaw.swift in Sources */,
 				AE89D49A1E065602003F5DE4 /* SKAttributeType+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

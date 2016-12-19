@@ -1,3 +1,5 @@
 github "molbie/outlaw" "31b02012483c889da896ec7c5c8829f570cf75ae"
 github "molbie/outlaw-coregraphics" "6d44e6772aff64197a4d7495d4f96af79b70d51f"
 github "molbie/outlaw-simd" "e8b83c955fca9fd7cfb2ec919d503d66410929d6"
+github "molbie/outlaw-appkit" "71d279af8b1d61b54fc1ce2b40525f9165212217"
+github "molbie/outlaw-uikit" "b8033eb7d20a9ec73dc62eac6f29e6ed872a5f1d"
