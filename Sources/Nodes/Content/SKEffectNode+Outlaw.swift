@@ -1,6 +1,6 @@
 //
 //  SKEffectNode+Outlaw.swift
-//  OutlawExtensions
+//  OutlawSpriteKit
 //
 //  Created by Brian Mullen on 12/16/16.
 //  Copyright © 2016 Molbie LLC. All rights reserved.
