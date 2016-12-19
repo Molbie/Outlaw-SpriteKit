@@ -147,7 +147,7 @@ public extension SKNode { /* Serializable */
         typealias keys = SKNode.NodeExtractableKeys
         
         var result = [String: Any]()
-        result[keys.position] = self.position.serialized() as [String: CGFloat]
+        result[keys.position] = self.position.serialized()
         result[keys.zPosition] = self.zPosition
         result[keys.zRotation] = self.zRotation
         result[keys.xScale] = self.xScale

@@ -60,7 +60,7 @@ extension SKPhysicsBody /* Serializable */ {
         result[keys.collisionBitMask] = body.collisionBitMask
         result[keys.usesPreciseCollisionDetection] = body.usesPreciseCollisionDetection
         result[keys.contactTestBitMask] = body.contactTestBitMask
-        result[keys.velocity] = body.velocity.serialized() as [String: CGFloat]
+        result[keys.velocity] = body.velocity.serialized()
         result[keys.angularVelocity] = body.angularVelocity
         result[keys.isResting] = body.isResting
         if #available(OSX 10.10, *) {

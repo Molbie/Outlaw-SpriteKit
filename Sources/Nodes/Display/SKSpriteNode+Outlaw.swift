@@ -55,12 +55,12 @@ public extension SKSpriteNode { /* Serializable */
             result[keys.shadowCastBitMask] = self.shadowCastBitMask
             result[keys.shadowedBitMask] = self.shadowedBitMask
         }
-        result[keys.centerRect] = self.centerRect.serialized() as [String: CGFloat]
+        result[keys.centerRect] = self.centerRect.serialized()
         result[keys.colorBlendFactor] = self.colorBlendFactor
         result[keys.color] = self.color.serialized()
         result[keys.blendMode] = self.blendMode.stringValue
-        result[keys.anchorPoint] = self.anchorPoint.serialized() as [String: CGFloat]
-        result[keys.size] = self.size.serialized() as [String: CGFloat]
+        result[keys.anchorPoint] = self.anchorPoint.serialized()
+        result[keys.size] = self.size.serialized()
 // TODO: implement shader extraction
 //        if let shader = self.shader {
 //            result[keys.shader] = shader.serialized()

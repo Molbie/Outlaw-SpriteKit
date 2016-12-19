@@ -29,7 +29,7 @@ extension SKPhysicsWorld /* Serializable */ {
         typealias keys = SKPhysicsWorld.ExtractableKeys
         
         var result = [String: Any]()
-        result[keys.gravity] = world.gravity.serialized() as [String: CGFloat]
+        result[keys.gravity] = world.gravity.serialized()
         result[keys.speed] = world.speed
         
         return result

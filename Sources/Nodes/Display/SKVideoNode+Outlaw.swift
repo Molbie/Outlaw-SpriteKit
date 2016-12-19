@@ -29,8 +29,8 @@ public extension SKVideoNode { /* Serializable */
         typealias keys = SKVideoNode.VideoNodeExtractableKeys
         
         var result = self.serializedNode(withChildren: withChildren)
-        result[keys.size] = self.size.serialized() as [String: CGFloat]
-        result[keys.anchorPoint] = self.anchorPoint.serialized() as [String: CGFloat]
+        result[keys.size] = self.size.serialized()
+        result[keys.anchorPoint] = self.anchorPoint.serialized()
         
         return result
     }

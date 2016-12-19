@@ -35,7 +35,7 @@ public extension SKScene { /* Serializable */
         typealias keys = SKScene.SceneExtractableKeys
         
         var result = self.serializedEffectNode(withChildren: withChildren)
-        result[keys.size] = self.size.serialized() as [String: CGFloat]
+        result[keys.size] = self.size.serialized()
         result[keys.scaleMode] = self.scaleMode.stringValue
 // TODO: implement camera extraction
 //        if let camera = self.camera {
@@ -47,8 +47,8 @@ public extension SKScene { /* Serializable */
 //        }
 // TODO: implement audioEngine extraction
 //        result[keys.audioEngine] = self.audioEngine.serialized()
-        result[keys.backgroundColor] = self.backgroundColor.serialized() as [String: CGFloat]
-        result[keys.anchorPoint] = self.anchorPoint.serialized() as [String: CGFloat]
+        result[keys.backgroundColor] = self.backgroundColor.serialized()
+        result[keys.anchorPoint] = self.anchorPoint.serialized()
         result[keys.physicsWorld] = SKPhysicsWorld.serialize(self.physicsWorld)
         
         return result
