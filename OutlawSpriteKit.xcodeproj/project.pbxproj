@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AE4DB74F1E06FABB00B0158C /* SKPhysicsBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */; };
+		AE837CE11E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CC81E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift */; };
+		AE837CF21E07B72400E31EAC /* SKReachConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */; };
 		AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */; };
 		AE89D45D1E065170003F5DE4 /* OutlawSpriteKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4681E0652DA003F5DE4 /* Outlaw.framework */; };
@@ -63,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		AE4DB74E1E06FABB00B0158C /* SKPhysicsBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsBodyTests.swift; sourceTree = "<group>"; };
+		AE837CC81E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKReachConstraints+Outlaw.swift"; sourceTree = "<group>"; };
+		AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKReachConstraintsTests.swift; sourceTree = "<group>"; };
 		AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OutlawSpriteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE89D44F1E065170003F5DE4 /* OutlawSpriteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlawSpriteKit.h; sourceTree = "<group>"; };
 		AE89D4501E065170003F5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +139,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE837CC31E07B54E00E31EAC /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AE837CC71E07B54E00E31EAC /* Constraints */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		AE837CC71E07B54E00E31EAC /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				AE837CC81E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		AE837CEF1E07B6FB00E31EAC /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AE837CF01E07B71400E31EAC /* Constraints */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		AE837CF01E07B71400E31EAC /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				AE837CF11E07B72400E31EAC /* SKReachConstraintsTests.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
 		AE89D4421E065170003F5DE4 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +206,7 @@
 				AE89D4BE1E065C24003F5DE4 /* Enums */,
 				AE89D4DE1E06764B003F5DE4 /* Views */,
 				AE89D4E61E067D61003F5DE4 /* Physics */,
+				AE837CEF1E07B6FB00E31EAC /* Nodes */,
 				AE89D45C1E065170003F5DE4 /* Info.plist */,
 			);
 			path = OutlawSpriteKitTests;
@@ -182,6 +219,7 @@
 				AE89D4741E065602003F5DE4 /* Enums */,
 				AE89D4DB1E067569003F5DE4 /* Views */,
 				AE89D4E11E067CF0003F5DE4 /* Physics */,
+				AE837CC31E07B54E00E31EAC /* Nodes */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -388,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE837CE11E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift in Sources */,
 				AE89D4DD1E067569003F5DE4 /* SKView+Outlaw.swift in Sources */,
 				AE89D49C1E065602003F5DE4 /* SKInterpolationMode+String.swift in Sources */,
 				AE89D4A11E065602003F5DE4 /* SKSceneScaleMode+String.swift in Sources */,
@@ -412,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE837CF21E07B72400E31EAC /* SKReachConstraintsTests.swift in Sources */,
 				AE89D4E81E067D76003F5DE4 /* SKPhysicsWorldTests.swift in Sources */,
 				AE89D4C01E065C33003F5DE4 /* SKActionTimingModeTests.swift in Sources */,
 				AE89D4CA1E0664EC003F5DE4 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */,
