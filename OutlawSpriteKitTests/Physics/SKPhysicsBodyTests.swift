@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKPhysicsBodyTests: XCTestCase {
+    fileprivate typealias keys = SKPhysicsBody.ExtractableKeys
+    
     func testSerializable() {
-        typealias keys = SKPhysicsBody.ExtractableKeys
-        
         let body = SKPhysicsBody()
         let data: [String: Any] = SKPhysicsBody.serialize(body)
         let dataVelocity: [String: Any]? = data[keys.velocity] as? [String: Any]
@@ -47,8 +47,6 @@ class SKPhysicsBodyTests: XCTestCase {
     }
     
     func testUpdatableWithMass() {
-        typealias keys = SKPhysicsBody.ExtractableKeys
-        
         let body = SKPhysicsBody(circleOfRadius: 1.0)
         let dataVelocity: [String: CGFloat] = ["dx": 99.0, "dy": 99.9]
         let data: [String: Any] = [keys.affectedByGravity: false,
@@ -98,8 +96,6 @@ class SKPhysicsBodyTests: XCTestCase {
     }
     
     func testUpdatableWithDensity() {
-        typealias keys = SKPhysicsBody.ExtractableKeys
-        
         let body = SKPhysicsBody(circleOfRadius: 1.0)
         let dataVelocity: [String: CGFloat] = ["dx": 99.0, "dy": 99.9]
         let data: [String: Any] = [keys.affectedByGravity: false,

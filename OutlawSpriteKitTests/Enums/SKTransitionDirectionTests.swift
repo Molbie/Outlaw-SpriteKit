@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKTransitionDirectionTests: XCTestCase {
+    fileprivate typealias strings = SKTransitionDirection.StringValues
+    
     func testStringInit() {
-        typealias strings = SKTransitionDirection.StringValues
-        
         let up = SKTransitionDirection(stringValue: strings.up)
         XCTAssertEqual(up, .up)
         
@@ -35,8 +35,6 @@ class SKTransitionDirectionTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKTransitionDirection.StringValues
-        
         let up = SKTransitionDirection(stringValue: strings.up.uppercased())
         XCTAssertEqual(up, .up)
         
@@ -54,8 +52,6 @@ class SKTransitionDirectionTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKTransitionDirection.StringValues
-        
         let up = SKTransitionDirection.up
         XCTAssertEqual(up.stringValue, strings.up)
         

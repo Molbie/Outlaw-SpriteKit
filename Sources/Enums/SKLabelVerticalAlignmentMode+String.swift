@@ -16,12 +16,11 @@ public extension SKLabelVerticalAlignmentMode {
         public static let top = "top"
         public static let bottom = "bottom"
     }
+    fileprivate typealias strings = SKLabelVerticalAlignmentMode.StringValues
 }
 
 public extension SKLabelVerticalAlignmentMode {
     public init?(stringValue: String) {
-        typealias strings = SKLabelVerticalAlignmentMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.baseline:
                 self = .baseline
@@ -37,8 +36,6 @@ public extension SKLabelVerticalAlignmentMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKLabelVerticalAlignmentMode.StringValues
-        
         let result: String
         switch self {
             case .baseline:

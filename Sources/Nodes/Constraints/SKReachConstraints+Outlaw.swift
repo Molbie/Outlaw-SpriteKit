@@ -21,22 +21,20 @@ public extension SKReachConstraints {
         public static let lowerAngleLimit: Int = 0
         public static let upperAngleLimit: Int = 1
     }
+    fileprivate typealias keys = SKReachConstraints.ExtractableKeys
+    fileprivate typealias indexes = SKReachConstraints.ExtractableIndexes
 }
 
 @available(OSX 10.10, *)
 extension SKReachConstraints: Value {
     public static func value(from object: Any) throws -> SKReachConstraints {
         if let data = object as? Extractable {
-            typealias keys = SKReachConstraints.ExtractableKeys
-            
             let lowerAngleLimit: CGFloat = try data.value(for: keys.lowerAngleLimit)
             let upperAngleLimit: CGFloat = try data.value(for: keys.upperAngleLimit)
             
             return SKReachConstraints(lowerAngleLimit: lowerAngleLimit, upperAngleLimit: upperAngleLimit)
         }
         else if let data = object as? IndexExtractable {
-            typealias indexes = SKReachConstraints.ExtractableIndexes
-            
             let lowerAngleLimit: CGFloat = try data.value(for: indexes.lowerAngleLimit)
             let upperAngleLimit: CGFloat = try data.value(for: indexes.upperAngleLimit)
             
@@ -52,8 +50,6 @@ extension SKReachConstraints: Value {
 @available(OSX 10.10, *)
 extension SKReachConstraints: Serializable {
     public func serialized() -> [String: CGFloat] {
-        typealias keys = SKReachConstraints.ExtractableKeys
-        
         var result = [String: CGFloat]()
         result[keys.lowerAngleLimit] = self.lowerAngleLimit
         result[keys.upperAngleLimit] = self.upperAngleLimit
@@ -66,8 +62,6 @@ extension SKReachConstraints: Serializable {
 @available(OSX 10.10, *)
 public extension SKReachConstraints /* IndexSerializable */ {
     public static func serialize(_ constraint: SKReachConstraints) -> [CGFloat] {
-        typealias indexes = SKReachConstraints.ExtractableIndexes
-        
         var result = [CGFloat](repeating: 0, count: 2)
         result[indexes.lowerAngleLimit] = constraint.lowerAngleLimit
         result[indexes.upperAngleLimit] = constraint.upperAngleLimit
@@ -79,8 +73,6 @@ public extension SKReachConstraints /* IndexSerializable */ {
 @available(OSX 10.10, *)
 extension SKReachConstraints: Updatable {
     public func update(with object: Extractable) throws {
-        typealias keys = SKReachConstraints.ExtractableKeys
-        
         if let lowerAngleLimit: CGFloat = object.value(for: keys.lowerAngleLimit) {
             self.lowerAngleLimit = lowerAngleLimit
         }
@@ -93,8 +85,6 @@ extension SKReachConstraints: Updatable {
 @available(OSX 10.10, *)
 extension SKReachConstraints: IndexUpdatable {
     public func update(with object: IndexExtractable) throws {
-        typealias indexes = SKReachConstraints.ExtractableIndexes
-        
         if let lowerAngleLimit: CGFloat = object.value(for: indexes.lowerAngleLimit) {
             self.lowerAngleLimit = lowerAngleLimit
         }

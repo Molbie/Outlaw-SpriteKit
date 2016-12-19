@@ -15,12 +15,11 @@ public extension SKInterpolationMode {
         public static let spline = "spline"
         public static let step = "step"
     }
+    fileprivate typealias strings = SKInterpolationMode.StringValues
 }
 
 public extension SKInterpolationMode {
     public init?(stringValue: String) {
-        typealias strings = SKInterpolationMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.linear:
                 self = .linear
@@ -34,8 +33,6 @@ public extension SKInterpolationMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKInterpolationMode.StringValues
-        
         let result: String
         switch self {
             case .linear:

@@ -38,14 +38,13 @@ public extension SKPhysicsBody {
         public static let pinned = "pinned"
         public static let joints = "joints"
     }
+    fileprivate typealias keys = SKPhysicsBody.ExtractableKeys
 }
 
 // NOTE: because of the exception, use this class method to 
 //       serialize instead
 extension SKPhysicsBody /* Serializable */ {
     public static func serialize(_ body: SKPhysicsBody) -> [String: Any] {
-        typealias keys = SKPhysicsBody.ExtractableKeys
-        
         var result = [String: Any]()
         result[keys.affectedByGravity] = body.affectedByGravity
         result[keys.allowsRotation] = body.allowsRotation
@@ -86,8 +85,6 @@ extension SKPhysicsBody /* Serializable */ {
 //       update instead
 extension SKPhysicsBody /* Updatable */ {
     public static func update(_ body: SKPhysicsBody, with object: Extractable) throws {
-        typealias keys = SKPhysicsBody.ExtractableKeys
-        
         if let affectedByGravity: Bool = object.value(for: keys.affectedByGravity) {
             body.affectedByGravity = affectedByGravity
         }

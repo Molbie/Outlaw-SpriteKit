@@ -16,12 +16,11 @@ public extension SKSceneScaleMode {
         public static let aspectFit = "aspectfit"
         public static let resizeFill = "resizefill"
     }
+    fileprivate typealias strings = SKSceneScaleMode.StringValues
 }
 
 public extension SKSceneScaleMode {
     public init?(stringValue: String) {
-        typealias strings = SKSceneScaleMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.fill:
                 self = .fill
@@ -37,8 +36,6 @@ public extension SKSceneScaleMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKSceneScaleMode.StringValues
-        
         let result: String
         switch self {
             case .fill:

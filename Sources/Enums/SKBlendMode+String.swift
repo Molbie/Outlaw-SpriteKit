@@ -19,12 +19,11 @@ public extension SKBlendMode {
         public static let screen = "screen"
         public static let replace = "replace"
     }
+    fileprivate typealias strings = SKBlendMode.StringValues
 }
 
 public extension SKBlendMode {
     public init?(stringValue: String) {
-        typealias strings = SKBlendMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.alpha:
                 self = .alpha
@@ -46,8 +45,6 @@ public extension SKBlendMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKBlendMode.StringValues
-        
         let result: String
         switch self {
             case .alpha:

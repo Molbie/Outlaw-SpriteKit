@@ -17,13 +17,12 @@ public extension SKTileDefinitionRotation {
         public static let rotation180 = "rotation180"
         public static let rotation270 = "rotation270"
     }
+    fileprivate typealias strings = SKTileDefinitionRotation.StringValues
 }
 
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 public extension SKTileDefinitionRotation {
     public init?(stringValue: String) {
-        typealias strings = SKTileDefinitionRotation.StringValues
-        
         switch stringValue.lowercased() {
             case strings.rotation0:
                 self = .rotation0
@@ -39,8 +38,6 @@ public extension SKTileDefinitionRotation {
     }
     
     public var stringValue: String {
-        typealias strings = SKTileDefinitionRotation.StringValues
-        
         let result: String
         switch self {
             case .rotation0:

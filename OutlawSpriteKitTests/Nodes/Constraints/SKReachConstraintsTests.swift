@@ -16,9 +16,10 @@ import SpriteKit
 
 @available(OSX 10.10, *)
 class SKReachConstraintsTests: XCTestCase {
+    fileprivate typealias keys = SKReachConstraints.ExtractableKeys
+    fileprivate typealias indexes = SKReachConstraints.ExtractableIndexes
+    
     func testExtractableValue() {
-        typealias keys = SKReachConstraints.ExtractableKeys
-        
         let rawData: [String: CGFloat] = [keys.lowerAngleLimit: 30,
                                           keys.upperAngleLimit: 60]
         let data: [String: [String: CGFloat]] = ["data": rawData]
@@ -29,8 +30,6 @@ class SKReachConstraintsTests: XCTestCase {
     }
     
     func testIndexExtractableValue() {
-        typealias indexes = SKReachConstraints.ExtractableIndexes
-        
         var rawData = [CGFloat](repeating: 0, count: 2)
         rawData[indexes.lowerAngleLimit] = 30
         rawData[indexes.upperAngleLimit] = 60
@@ -59,8 +58,6 @@ class SKReachConstraintsTests: XCTestCase {
     }
     
     func testSerializable() {
-        typealias keys = SKReachConstraints.ExtractableKeys
-        
         let value = SKReachConstraints(lowerAngleLimit: 30, upperAngleLimit: 60)
         let data: [String: CGFloat] = value.serialized()
         
@@ -69,8 +66,6 @@ class SKReachConstraintsTests: XCTestCase {
     }
     
     func testIndexSerializable() {
-        typealias indexes = SKReachConstraints.ExtractableIndexes
-        
         let value = SKReachConstraints(lowerAngleLimit: 30, upperAngleLimit: 60)
         let data: [CGFloat] = SKReachConstraints.serialize(value)
         
@@ -79,8 +74,6 @@ class SKReachConstraintsTests: XCTestCase {
     }
     
     func testUpdatable() {
-        typealias keys = SKReachConstraints.ExtractableKeys
-        
         let data: [String: CGFloat] = [keys.lowerAngleLimit: 30,
                                        keys.upperAngleLimit: 60]
         let value = SKReachConstraints(lowerAngleLimit: 0, upperAngleLimit: 1)
@@ -91,8 +84,6 @@ class SKReachConstraintsTests: XCTestCase {
     }
     
     func testIndexUpdatable() {
-        typealias indexes = SKReachConstraints.ExtractableIndexes
-        
         var data = [CGFloat](repeating: 0, count: 2)
         data[indexes.lowerAngleLimit] = 30
         data[indexes.upperAngleLimit] = 60

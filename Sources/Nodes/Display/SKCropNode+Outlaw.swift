@@ -21,12 +21,11 @@ public extension SKCropNode {
     public struct CropNodeExtractableKeys {
         public static let maskNode = "maskNode"
     }
+    fileprivate typealias keys = SKCropNode.CropNodeExtractableKeys
 }
 
 public extension SKCropNode { /* Serializable */
     public func serializedCropNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKCropNode.CropNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
         if let maskNode = self.maskNode {
             result[keys.maskNode] = maskNode.serialized()
@@ -38,8 +37,6 @@ public extension SKCropNode { /* Serializable */
 
 public extension SKCropNode { /* Updatable */
     public func updateCropNode(with object: Extractable) throws {
-        typealias keys = SKCropNode.CropNodeExtractableKeys
-        
         try self.updateNode(with: object)
         if let maskNode: [String: Any] = object.value(for: keys.maskNode) {
             // TODO: create one if it doesn't already exist

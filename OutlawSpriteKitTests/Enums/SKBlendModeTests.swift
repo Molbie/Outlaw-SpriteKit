@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKBlendModeTests: XCTestCase {
+    fileprivate typealias strings = SKBlendMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKBlendMode.StringValues
-        
         let alpha = SKBlendMode(stringValue: strings.alpha)
         XCTAssertEqual(alpha, .alpha)
         
@@ -44,8 +44,6 @@ class SKBlendModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKBlendMode.StringValues
-        
         let alpha = SKBlendMode(stringValue: strings.alpha.uppercased())
         XCTAssertEqual(alpha, .alpha)
         
@@ -72,8 +70,6 @@ class SKBlendModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKBlendMode.StringValues
-        
         let alpha = SKBlendMode.alpha
         XCTAssertEqual(alpha.stringValue, strings.alpha)
         

@@ -16,9 +16,9 @@ import SpriteKit
 
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 class SKTileSetTypeTests: XCTestCase {
+    fileprivate typealias strings = SKTileSetType.StringValues
+    
     func testStringInit() {
-        typealias strings = SKTileSetType.StringValues
-        
         let grid = SKTileSetType(stringValue: strings.grid)
         XCTAssertEqual(grid, .grid)
         
@@ -36,8 +36,6 @@ class SKTileSetTypeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKTileSetType.StringValues
-        
         let grid = SKTileSetType(stringValue: strings.grid.uppercased())
         XCTAssertEqual(grid, .grid)
         
@@ -55,8 +53,6 @@ class SKTileSetTypeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKTileSetType.StringValues
-        
         let grid = SKTileSetType.grid
         XCTAssertEqual(grid.stringValue, strings.grid)
         

@@ -16,9 +16,9 @@ import SpriteKit
 
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 class SKTileDefinitionRotationTests: XCTestCase {
+    fileprivate typealias strings = SKTileDefinitionRotation.StringValues
+    
     func testStringInit() {
-        typealias strings = SKTileDefinitionRotation.StringValues
-        
         let rotation0 = SKTileDefinitionRotation(stringValue: strings.rotation0)
         XCTAssertEqual(rotation0, .rotation0)
         
@@ -36,8 +36,6 @@ class SKTileDefinitionRotationTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKTileDefinitionRotation.StringValues
-        
         let rotation0 = SKTileDefinitionRotation(stringValue: strings.rotation0.uppercased())
         XCTAssertEqual(rotation0, .rotation0)
         
@@ -55,8 +53,6 @@ class SKTileDefinitionRotationTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKTileDefinitionRotation.StringValues
-        
         let rotation0 = SKTileDefinitionRotation.rotation0
         XCTAssertEqual(rotation0.stringValue, strings.rotation0)
         

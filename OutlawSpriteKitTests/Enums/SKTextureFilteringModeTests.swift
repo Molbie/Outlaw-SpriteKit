@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKTextureFilteringModeTests: XCTestCase {
+    fileprivate typealias strings = SKTextureFilteringMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKTextureFilteringMode.StringValues
-        
         let nearest = SKTextureFilteringMode(stringValue: strings.nearest)
         XCTAssertEqual(nearest, .nearest)
         
@@ -29,8 +29,6 @@ class SKTextureFilteringModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKTextureFilteringMode.StringValues
-        
         let nearest = SKTextureFilteringMode(stringValue: strings.nearest.uppercased())
         XCTAssertEqual(nearest, .nearest)
         
@@ -42,8 +40,6 @@ class SKTextureFilteringModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKTextureFilteringMode.StringValues
-        
         let nearest = SKTextureFilteringMode.nearest
         XCTAssertEqual(nearest.stringValue, strings.nearest)
         

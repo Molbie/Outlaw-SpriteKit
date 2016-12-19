@@ -35,12 +35,11 @@ public extension SKSpriteNode {
         public static let warpGeometry = "warpGeometry"
         public static let subdivisionLevels = "subdivisionLevels"
     }
+    fileprivate typealias keys = SKSpriteNode.SpriteNodeExtractableKeys
 }
 
 public extension SKSpriteNode { /* Serializable */
     public func serializedSpriteNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKSpriteNode.SpriteNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
 // TODO: implement texture extraction
 //        if let texture = self.texture {
@@ -84,8 +83,6 @@ public extension SKSpriteNode { /* Serializable */
 
 public extension SKSpriteNode { /* Updatable */
     public func updateSpriteNode(with object: Extractable) throws {
-        typealias keys = SKSpriteNode.SpriteNodeExtractableKeys
-        
         try self.updateNode(with: object)
 // TODO: update texture
 //        if let texture: [String: Any] = object.value(for: keys.texture) {

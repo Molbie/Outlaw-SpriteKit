@@ -20,14 +20,13 @@ public extension SKPhysicsWorld {
         public static let gravity = "gravity"
         public static let speed = "speed"
     }
+    fileprivate typealias keys = SKPhysicsWorld.ExtractableKeys
 }
 
 // NOTE: because of the exception, use this class method to 
 //       serialize instead
 extension SKPhysicsWorld /* Serializable */ {
     public static func serialize(_ world: SKPhysicsWorld) -> [String: Any] {
-        typealias keys = SKPhysicsWorld.ExtractableKeys
-        
         var result = [String: Any]()
         result[keys.gravity] = world.gravity.serialized()
         result[keys.speed] = world.speed
@@ -40,8 +39,6 @@ extension SKPhysicsWorld /* Serializable */ {
 //       update instead
 extension SKPhysicsWorld /* Updatable */ {
     public static func update(_ world: SKPhysicsWorld, with object: Extractable) throws {
-        typealias keys = SKPhysicsWorld.ExtractableKeys
-        
         if let gravity: CGVector = try? object.value(for: keys.gravity) {
             world.gravity = gravity
         }

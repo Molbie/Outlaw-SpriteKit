@@ -26,12 +26,11 @@ public extension SKEffectNode {
         public static let warpGeometry = "warpGeometry"
         public static let subdivisionLevels = "subdivisionLevels"
     }
+    fileprivate typealias keys = SKEffectNode.EffectNodeExtractableKeys
 }
 
 public extension SKEffectNode { /* Serializable */
     public func serializedEffectNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKEffectNode.EffectNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
 // TODO: implement filter extraction
 //        if let filter = self.filter {
@@ -64,8 +63,6 @@ public extension SKEffectNode { /* Serializable */
 
 public extension SKEffectNode { /* Updatable */
     public func updateEffectNode(with object: Extractable) throws {
-        typealias keys = SKEffectNode.EffectNodeExtractableKeys
-        
         try self.updateNode(with: object)
 // TODO: update filter
 //        if let filter: CIFilter = object.value(for: keys.filter) {

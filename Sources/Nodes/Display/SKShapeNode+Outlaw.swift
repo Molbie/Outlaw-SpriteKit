@@ -35,13 +35,12 @@ public extension SKShapeNode {
         public static let strokeShader = "strokeShader"
         public static let attributeValues = "attributeValues"
     }
+    fileprivate typealias keys = SKShapeNode.ShapeNodeExtractableKeys
 }
 
 
 public extension SKShapeNode { /* Serializable */
     public func serializedShapeNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKShapeNode.ShapeNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
 // TODO: implement path extraction
 //        if let path = self.path {
@@ -85,8 +84,6 @@ public extension SKShapeNode { /* Serializable */
 
 public extension SKShapeNode { /* Updatable */
     public func updateShapeNode(with object: Extractable) throws {
-        typealias keys = SKShapeNode.ShapeNodeExtractableKeys
-        
         try self.updateNode(with: object)
 // TODO: update path
 //        if let path: CGPath = object.value(for: keys.path) {

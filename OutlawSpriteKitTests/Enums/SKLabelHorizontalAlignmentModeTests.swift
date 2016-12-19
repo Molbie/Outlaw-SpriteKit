@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKLabelHorizontalAlignmentModeTests: XCTestCase {
+    fileprivate typealias strings = SKLabelHorizontalAlignmentMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
-        
         let center = SKLabelHorizontalAlignmentMode(stringValue: strings.center)
         XCTAssertEqual(center, .center)
         
@@ -32,8 +32,6 @@ class SKLabelHorizontalAlignmentModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
-        
         let center = SKLabelHorizontalAlignmentMode(stringValue: strings.center.uppercased())
         XCTAssertEqual(center, .center)
         
@@ -48,8 +46,6 @@ class SKLabelHorizontalAlignmentModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
-        
         let center = SKLabelHorizontalAlignmentMode.center
         XCTAssertEqual(center.stringValue, strings.center)
         

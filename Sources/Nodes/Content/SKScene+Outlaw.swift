@@ -28,12 +28,11 @@ public extension SKScene {
         public static let anchorPoint = "anchorPoint"
         public static let physicsWorld = "physicsWorld"
     }
+    fileprivate typealias keys = SKScene.SceneExtractableKeys
 }
 
 public extension SKScene { /* Serializable */
     public func serializedSceneNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKScene.SceneExtractableKeys
-        
         var result = self.serializedEffectNode(withChildren: withChildren)
         result[keys.size] = self.size.serialized()
         result[keys.scaleMode] = self.scaleMode.stringValue
@@ -57,8 +56,6 @@ public extension SKScene { /* Serializable */
 
 public extension SKScene { /* Updatable */
     public func updateSceneNode(with object: Extractable) throws {
-        typealias keys = SKScene.SceneExtractableKeys
-        
         try self.updateEffectNode(with: object)
         if let size: CGSize = object.value(for: keys.size) {
             self.size = size

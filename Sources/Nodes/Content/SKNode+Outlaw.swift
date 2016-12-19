@@ -34,6 +34,7 @@ public extension SKNode {
         public static let reachConstraints = "reachConstraints"
         public static let constraints = "constraints"
     }
+    fileprivate typealias keys = SKNode.NodeExtractableKeys
 }
 
 extension SKNode: Serializable {
@@ -60,33 +61,31 @@ extension SKNode: Serializable {
 //            case let node as SKEmitterNode:
 //                return node.serializedEmitterNode(withChildren: withChildren)
             default:
-//                if #available(iOS 8.0, OSX 10.10, *) {
-//                    switch self {
+                if #available(iOS 8.0, OSX 10.10, *) {
+                    switch self {
 //                        case let node as SKLightNode:
 //                            return node.serializedLightNode(withChildren: withChildren)
 //                        case let node as SKFieldNode:
 //                            return node.serializedFieldNode(withChildren: withChildren)
-//                        default:
-//                            if #available(iOS 9.0, OSX 10.11, *) {
-//                                switch self {
-//                                    case let node as SKCameraNode:
-//                                        return node.serializedCameraNode(withChildren: withChildren)
+                        default:
+                            if #available(iOS 9.0, OSX 10.11, *) {
+                                switch self {
+                                    case let node as SKCameraNode:
+                                        return node.serializedCameraNode(withChildren: withChildren)
 //                                    case let node as SKAudioNode:
 //                                        return node.serializedAudioNode(withChildren: withChildren)
-//                                    default:
-//                                        return self.serializedNode(withChildren: withChildren)
-//                                }
-//                            }
-//                            else
-//                            {
-//                                return self.serializedNode(withChildren: withChildren)
-//                            }
-//                    }
-//                }
-//                else
-//                {
+                                    default:
+                                        return self.serializedNode(withChildren: withChildren)
+                                }
+                            }
+                            else {
+                                return self.serializedNode(withChildren: withChildren)
+                            }
+                    }
+                }
+                else {
                     return self.serializedNode(withChildren: withChildren)
-//                }
+                }
         }
     }
 }
@@ -111,41 +110,37 @@ extension SKNode: Updatable {
 //            case let node as SKEmitterNode:
 //                try node.updateEmitterNode(with: object)
             default:
-//                if #available(OSX 10.10, *) {
-//                    switch self {
+                if #available(OSX 10.10, *) {
+                    switch self {
 //                    case let node as SKLightNode:
 //                        try node.updateLightNode(with: object)
 //                    case let node as SKFieldNode:
 //                        try node.updateFieldNode(with: object)
-//                    default:
-//                        if #available(iOS 9.0, OSX 10.11, *) {
-//                            switch self {
-//                            case let node as SKCameraNode:
-//                                try node.updateCameraNode(with: object)
-//                            case let node as SKAudioNode:
-//                                try node.updateAudioNode(with: object)
-//                            default:
-//                                try self.updateNode(with: object)
-//                            }
-//                        }
-//                        else
-//                        {
-//                            try self.updateNode(with: object)
-//                        }
-//                    }
-//                }
-//                else
-//                {
+                        default:
+                            if #available(iOS 9.0, OSX 10.11, *) {
+                                switch self {
+                                case let node as SKCameraNode:
+                                    try node.updateCameraNode(with: object)
+    //                            case let node as SKAudioNode:
+    //                                try node.updateAudioNode(with: object)
+                                default:
+                                    try self.updateNode(with: object)
+                                }
+                            }
+                            else {
+                                try self.updateNode(with: object)
+                            }
+                    }
+                }
+                else {
                     try self.updateNode(with: object)
-//                }
+                }
         }
     }
 }
 
 public extension SKNode { /* Serializable */
     public func serializedNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKNode.NodeExtractableKeys
-        
         var result = [String: Any]()
         result[keys.position] = self.position.serialized()
         result[keys.zPosition] = self.zPosition
@@ -191,8 +186,6 @@ public extension SKNode { /* Serializable */
 
 public extension SKNode { /* Updatable */
     public func updateNode(with object: Extractable) throws {
-        typealias keys = SKNode.NodeExtractableKeys
-        
         if let position: CGPoint = object.value(for: keys.position) {
             self.position = position
         }

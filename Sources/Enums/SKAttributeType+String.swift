@@ -22,13 +22,12 @@ public extension SKAttributeType {
         public static let vectorHalfFloat3 = "vectorhalffloat3"
         public static let vectorHalfFloat4 = "vectorhalffloat4"
     }
+    fileprivate typealias strings = SKAttributeType.StringValues
 }
 
 @available(iOS 9.0, OSX 10.11, *)
 public extension SKAttributeType {
     public init?(stringValue: String) {
-        typealias strings = SKAttributeType.StringValues
-        
         switch stringValue.lowercased() {
             case strings.none:
                 self = .none
@@ -54,8 +53,6 @@ public extension SKAttributeType {
     }
     
     public var stringValue: String {
-        typealias strings = SKAttributeType.StringValues
-        
         let result: String
         switch self {
             case .none:

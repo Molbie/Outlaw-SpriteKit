@@ -16,12 +16,11 @@ public extension SKActionTimingMode {
         public static let easeOut = "easeout"
         public static let easeInEaseOut = "easeineaseout"
     }
+    fileprivate typealias strings = SKActionTimingMode.StringValues
 }
 
 public extension SKActionTimingMode {
     public init?(stringValue: String) {
-        typealias strings = SKActionTimingMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.linear:
                 self = .linear
@@ -37,8 +36,6 @@ public extension SKActionTimingMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKActionTimingMode.StringValues
-        
         let result: String
         switch self {
             case .linear:

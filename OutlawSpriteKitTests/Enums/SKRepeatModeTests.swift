@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKRepeatModeTests: XCTestCase {
+    fileprivate typealias strings = SKRepeatMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKRepeatMode.StringValues
-        
         let clamp = SKRepeatMode(stringValue: strings.clamp)
         XCTAssertEqual(clamp, .clamp)
         
@@ -29,8 +29,6 @@ class SKRepeatModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKRepeatMode.StringValues
-        
         let clamp = SKRepeatMode(stringValue: strings.clamp.uppercased())
         XCTAssertEqual(clamp, .clamp)
         
@@ -42,8 +40,6 @@ class SKRepeatModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKRepeatMode.StringValues
-        
         let clamp = SKRepeatMode.clamp
         XCTAssertEqual(clamp.stringValue, strings.clamp)
         

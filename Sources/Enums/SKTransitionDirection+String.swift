@@ -16,12 +16,11 @@ public extension SKTransitionDirection {
         public static let right = "right"
         public static let left = "left"
     }
+    fileprivate typealias strings = SKTransitionDirection.StringValues
 }
 
 public extension SKTransitionDirection {
     public init?(stringValue: String) {
-        typealias strings = SKTransitionDirection.StringValues
-        
         switch stringValue.lowercased() {
             case strings.up:
                 self = .up
@@ -37,8 +36,6 @@ public extension SKTransitionDirection {
     }
     
     public var stringValue: String {
-        typealias strings = SKTransitionDirection.StringValues
-        
         let result: String
         switch self {
             case .up:

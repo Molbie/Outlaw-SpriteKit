@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKLabelVerticalAlignmentModeTests: XCTestCase {
+    fileprivate typealias strings = SKLabelVerticalAlignmentMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKLabelVerticalAlignmentMode.StringValues
-        
         let baseline = SKLabelVerticalAlignmentMode(stringValue: strings.baseline)
         XCTAssertEqual(baseline, .baseline)
         
@@ -35,8 +35,6 @@ class SKLabelVerticalAlignmentModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKLabelVerticalAlignmentMode.StringValues
-        
         let baseline = SKLabelVerticalAlignmentMode(stringValue: strings.baseline.uppercased())
         XCTAssertEqual(baseline, .baseline)
         
@@ -54,8 +52,6 @@ class SKLabelVerticalAlignmentModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKLabelVerticalAlignmentMode.StringValues
-        
         let baseline = SKLabelVerticalAlignmentMode.baseline
         XCTAssertEqual(baseline.stringValue, strings.baseline)
         

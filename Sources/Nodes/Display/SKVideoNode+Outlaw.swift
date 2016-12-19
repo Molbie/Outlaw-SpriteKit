@@ -22,12 +22,11 @@ public extension SKVideoNode {
         public static let size = "size"
         public static let anchorPoint = "anchorPoint"
     }
+    fileprivate typealias keys = SKVideoNode.VideoNodeExtractableKeys
 }
 
 public extension SKVideoNode { /* Serializable */
     public func serializedVideoNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKVideoNode.VideoNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
         result[keys.size] = self.size.serialized()
         result[keys.anchorPoint] = self.anchorPoint.serialized()
@@ -38,8 +37,6 @@ public extension SKVideoNode { /* Serializable */
 
 public extension SKVideoNode { /* Updatable */
     public func updateVideoNode(with object: Extractable) throws {
-        typealias keys = SKVideoNode.VideoNodeExtractableKeys
-        
         try self.updateNode(with: object)
         if let size: CGSize = object.value(for: keys.size) {
             self.size = size

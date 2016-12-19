@@ -16,9 +16,9 @@ import SpriteKit
 
 #if !os(watchOS)
 class SKViewTests: XCTestCase {
+    fileprivate typealias keys = SKView.ExtractableKeys
+    
     func testSerializable() {
-        typealias keys = SKView.ExtractableKeys
-        
         let view = SKView()
         let data: [String: Any] = view.serialized()
         
@@ -44,8 +44,6 @@ class SKViewTests: XCTestCase {
     }
     
     func testUpdatable() {
-        typealias keys = SKView.ExtractableKeys
-        
         let view = SKView()
         let data: [String: Any] = [keys.isPaused: true,
                                    keys.showsFPS: true,

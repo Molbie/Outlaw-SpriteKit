@@ -16,9 +16,9 @@ import SpriteKit
 
 @available(iOS 9.0, OSX 10.11, *)
 class SKAttributeTypeTests: XCTestCase {
+    fileprivate typealias strings = SKAttributeType.StringValues
+    
     func testStringInit() {
-        typealias strings = SKAttributeType.StringValues
-        
         let none = SKAttributeType(stringValue: strings.none)
         XCTAssertEqual(none, SKAttributeType.none)
         
@@ -51,8 +51,6 @@ class SKAttributeTypeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKAttributeType.StringValues
-        
         let none = SKAttributeType(stringValue: strings.none.uppercased())
         XCTAssertEqual(none, SKAttributeType.none)
         
@@ -85,8 +83,6 @@ class SKAttributeTypeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKAttributeType.StringValues
-        
         let none = SKAttributeType.none
         XCTAssertEqual(none.stringValue, strings.none)
         

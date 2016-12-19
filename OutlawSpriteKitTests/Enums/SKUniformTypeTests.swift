@@ -16,9 +16,9 @@ import SpriteKit
 
 @available(OSX 10.10, *)
 class SKUniformTypeTests: XCTestCase {
+    fileprivate typealias strings = SKUniformType.StringValues
+    
     func testStringInit() {
-        typealias strings = SKUniformType.StringValues
-        
         let none = SKUniformType(stringValue: strings.none)
         XCTAssertEqual(none, SKUniformType.none)
         
@@ -51,8 +51,6 @@ class SKUniformTypeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKUniformType.StringValues
-        
         let none = SKUniformType(stringValue: strings.none.uppercased())
         XCTAssertEqual(none, SKUniformType.none)
         
@@ -85,8 +83,6 @@ class SKUniformTypeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKUniformType.StringValues
-        
         let none = SKUniformType.none
         XCTAssertEqual(none.stringValue, strings.none)
         

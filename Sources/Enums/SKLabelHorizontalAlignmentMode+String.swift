@@ -15,12 +15,11 @@ public extension SKLabelHorizontalAlignmentMode {
         public static let left = "left"
         public static let right = "right"
     }
+    fileprivate typealias strings = SKLabelHorizontalAlignmentMode.StringValues
 }
 
 public extension SKLabelHorizontalAlignmentMode {
     public init?(stringValue: String) {
-        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.center:
                 self = .center
@@ -34,8 +33,6 @@ public extension SKLabelHorizontalAlignmentMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKLabelHorizontalAlignmentMode.StringValues
-        
         let result: String
         switch self {
             case .center:

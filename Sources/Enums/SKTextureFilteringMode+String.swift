@@ -14,12 +14,11 @@ public extension SKTextureFilteringMode {
         public static let nearest = "nearest"
         public static let linear = "linear"
     }
+    fileprivate typealias strings = SKTextureFilteringMode.StringValues
 }
 
 public extension SKTextureFilteringMode {
     public init?(stringValue: String) {
-        typealias strings = SKTextureFilteringMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.nearest:
                 self = .nearest
@@ -31,8 +30,6 @@ public extension SKTextureFilteringMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKTextureFilteringMode.StringValues
-        
         let result: String
         switch self {
             case .nearest:

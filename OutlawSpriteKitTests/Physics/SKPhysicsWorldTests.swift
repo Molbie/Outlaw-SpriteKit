@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKPhysicsWorldTests: XCTestCase {
+    fileprivate typealias keys = SKPhysicsWorld.ExtractableKeys
+    
     func testSerializable() {
-        typealias keys = SKPhysicsWorld.ExtractableKeys
-        
         let world = SKPhysicsWorld()
         let data: [String: Any] = SKPhysicsWorld.serialize(world)
         let dataGravity: [String: Any]? = data[keys.gravity] as? [String: Any]
@@ -28,8 +28,6 @@ class SKPhysicsWorldTests: XCTestCase {
     }
     
     func testUpdatable() {
-        typealias keys = SKPhysicsWorld.ExtractableKeys
-        
         let world = SKPhysicsWorld()
         let dataGravity: [String: CGFloat] = ["dx": 99.0, "dy": 99.9]
         let data: [String: Any] = [keys.gravity: dataGravity,

@@ -16,9 +16,9 @@ import SpriteKit
 
 @available(iOS 9.0, OSX 10.11, *)
 class SKParticleRenderOrderTests: XCTestCase {
+    fileprivate typealias strings = SKParticleRenderOrder.StringValues
+    
     func testStringInit() {
-        typealias strings = SKParticleRenderOrder.StringValues
-        
         let oldestLast = SKParticleRenderOrder(stringValue: strings.oldestLast)
         XCTAssertEqual(oldestLast, .oldestLast)
         
@@ -33,8 +33,6 @@ class SKParticleRenderOrderTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKParticleRenderOrder.StringValues
-        
         let oldestLast = SKParticleRenderOrder(stringValue: strings.oldestLast.uppercased())
         XCTAssertEqual(oldestLast, .oldestLast)
         
@@ -49,8 +47,6 @@ class SKParticleRenderOrderTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKParticleRenderOrder.StringValues
-        
         let oldestLast = SKParticleRenderOrder.oldestLast
         XCTAssertEqual(oldestLast.stringValue, strings.oldestLast)
         

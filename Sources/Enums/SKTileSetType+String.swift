@@ -17,13 +17,12 @@ public extension SKTileSetType {
         public static let hexagonalFlat = "hexagonalflat"
         public static let hexagonalPointy = "hexagonalpointy"
     }
+    fileprivate typealias strings = SKTileSetType.StringValues
 }
 
 @available(iOS 10.0, tvOS 10.0, OSX 10.12, watchOS 3.0, *)
 public extension SKTileSetType {
     public init?(stringValue: String) {
-        typealias strings = SKTileSetType.StringValues
-        
         switch stringValue.lowercased() {
             case strings.grid:
                 self = .grid
@@ -39,8 +38,6 @@ public extension SKTileSetType {
     }
     
     public var stringValue: String {
-        typealias strings = SKTileSetType.StringValues
-        
         let result: String
         switch self {
             case .grid:

@@ -16,13 +16,12 @@ public extension SKParticleRenderOrder {
         public static let oldestFirst = "oldestfirst"
         public static let dontCare = "dontcare"
     }
+    fileprivate typealias strings = SKParticleRenderOrder.StringValues
 }
 
 @available(iOS 9.0, OSX 10.11, *)
 public extension SKParticleRenderOrder {
     public init?(stringValue: String) {
-        typealias strings = SKParticleRenderOrder.StringValues
-        
         switch stringValue.lowercased() {
             case strings.oldestLast:
                 self = .oldestLast
@@ -36,8 +35,6 @@ public extension SKParticleRenderOrder {
     }
     
     public var stringValue: String {
-        typealias strings = SKParticleRenderOrder.StringValues
-        
         let result: String
         switch self {
             case .oldestLast:

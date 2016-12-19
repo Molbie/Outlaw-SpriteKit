@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKInterpolationModeTests: XCTestCase {
+    fileprivate typealias strings = SKInterpolationMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKInterpolationMode.StringValues
-        
         let linear = SKInterpolationMode(stringValue: strings.linear)
         XCTAssertEqual(linear, .linear)
         
@@ -32,8 +32,6 @@ class SKInterpolationModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKInterpolationMode.StringValues
-        
         let linear = SKInterpolationMode(stringValue: strings.linear.uppercased())
         XCTAssertEqual(linear, .linear)
         
@@ -48,8 +46,6 @@ class SKInterpolationModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKInterpolationMode.StringValues
-        
         let linear = SKInterpolationMode.linear
         XCTAssertEqual(linear.stringValue, strings.linear)
         

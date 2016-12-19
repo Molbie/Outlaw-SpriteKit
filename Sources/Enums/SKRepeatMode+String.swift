@@ -14,12 +14,11 @@ public extension SKRepeatMode {
         public static let clamp = "clamp"
         public static let loop = "loop"
     }
+    fileprivate typealias strings = SKRepeatMode.StringValues
 }
 
 public extension SKRepeatMode {
     public init?(stringValue: String) {
-        typealias strings = SKRepeatMode.StringValues
-        
         switch stringValue.lowercased() {
             case strings.clamp:
                 self = .clamp
@@ -31,8 +30,6 @@ public extension SKRepeatMode {
     }
     
     public var stringValue: String {
-        typealias strings = SKRepeatMode.StringValues
-        
         let result: String
         switch self {
             case .clamp:

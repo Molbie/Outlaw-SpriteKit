@@ -27,12 +27,11 @@ public extension SKView {
         public static let preferredFramesPerSecond = "preferredFramesPerSecond"
         public static let frameInterval = "frameInterval"
     }
+    fileprivate typealias keys = SKView.ExtractableKeys
 }
 
 extension SKView: Serializable {
     public func serialized() -> [String: Any] {
-        typealias keys = SKView.ExtractableKeys
-        
         var result = [String: Any]()
         result[keys.isPaused] = self.isPaused
         result[keys.showsFPS] = self.showsFPS
@@ -60,8 +59,6 @@ extension SKView: Serializable {
 
 extension SKView: Updatable {
     public func update(with object: Extractable) throws {
-        typealias keys = SKView.ExtractableKeys
-        
         if let isPaused: Bool = object.value(for: keys.isPaused) {
             self.isPaused = isPaused
         }

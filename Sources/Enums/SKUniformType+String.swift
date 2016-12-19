@@ -22,13 +22,12 @@ public extension SKUniformType {
         public static let floatMatrix4 = "floatmatrix4"
         public static let texture = "texture"
     }
+    fileprivate typealias strings = SKUniformType.StringValues
 }
 
 @available(OSX 10.10, *)
 public extension SKUniformType {
     public init?(stringValue: String) {
-        typealias strings = SKUniformType.StringValues
-        
         switch stringValue.lowercased() {
             case strings.none:
                 self = .none
@@ -54,8 +53,6 @@ public extension SKUniformType {
     }
     
     public var stringValue: String {
-        typealias strings = SKUniformType.StringValues
-        
         let result: String
         switch self {
             case .none:

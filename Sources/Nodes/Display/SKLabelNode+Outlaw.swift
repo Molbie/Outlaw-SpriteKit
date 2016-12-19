@@ -29,12 +29,11 @@ public extension SKLabelNode {
         public static let color = "color"
         public static let blendMode = "blendMode"
     }
+    fileprivate typealias keys = SKLabelNode.LabelNodeExtractableKeys
 }
 
 public extension SKLabelNode { /* Serializable */
     public func serializedLabelNode(withChildren: Bool) -> [String: Any] {
-        typealias keys = SKLabelNode.LabelNodeExtractableKeys
-        
         var result = self.serializedNode(withChildren: withChildren)
         result[keys.verticalAlignmentMode] = self.verticalAlignmentMode.stringValue
         result[keys.horizontalAlignmentMode] = self.horizontalAlignmentMode.stringValue
@@ -59,8 +58,6 @@ public extension SKLabelNode { /* Serializable */
 
 public extension SKLabelNode { /* Updatable */
     public func updateLabelNode(with object: Extractable) throws {
-        typealias keys = SKLabelNode.LabelNodeExtractableKeys
-        
         try self.updateNode(with: object)
         if let stringValue: String = object.value(for: keys.verticalAlignmentMode), let verticalAlignmentMode = SKLabelVerticalAlignmentMode(stringValue: stringValue) {
             self.verticalAlignmentMode = verticalAlignmentMode

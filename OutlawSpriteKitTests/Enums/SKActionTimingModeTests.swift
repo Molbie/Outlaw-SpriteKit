@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKActionTimingModeTests: XCTestCase {
+    fileprivate typealias strings = SKActionTimingMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKActionTimingMode.StringValues
-        
         let linear = SKActionTimingMode(stringValue: strings.linear)
         XCTAssertEqual(linear, .linear)
         
@@ -35,8 +35,6 @@ class SKActionTimingModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKActionTimingMode.StringValues
-        
         let linear = SKActionTimingMode(stringValue: strings.linear.uppercased())
         XCTAssertEqual(linear, .linear)
         
@@ -54,8 +52,6 @@ class SKActionTimingModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKActionTimingMode.StringValues
-        
         let linear = SKActionTimingMode.linear
         XCTAssertEqual(linear.stringValue, strings.linear)
         

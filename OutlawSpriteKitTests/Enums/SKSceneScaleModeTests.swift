@@ -15,9 +15,9 @@ import SpriteKit
 
 
 class SKSceneScaleModeTests: XCTestCase {
+    fileprivate typealias strings = SKSceneScaleMode.StringValues
+    
     func testStringInit() {
-        typealias strings = SKSceneScaleMode.StringValues
-        
         let fill = SKSceneScaleMode(stringValue: strings.fill)
         XCTAssertEqual(fill, .fill)
         
@@ -35,8 +35,6 @@ class SKSceneScaleModeTests: XCTestCase {
     }
     
     func testUpperStringInit() {
-        typealias strings = SKSceneScaleMode.StringValues
-        
         let fill = SKSceneScaleMode(stringValue: strings.fill.uppercased())
         XCTAssertEqual(fill, .fill)
         
@@ -54,8 +52,6 @@ class SKSceneScaleModeTests: XCTestCase {
     }
     
     func testStringValue() {
-        typealias strings = SKSceneScaleMode.StringValues
-        
         let fill = SKSceneScaleMode.fill
         XCTAssertEqual(fill.stringValue, strings.fill)
         
