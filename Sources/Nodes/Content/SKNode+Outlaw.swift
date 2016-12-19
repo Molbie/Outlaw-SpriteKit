@@ -58,8 +58,8 @@ extension SKNode: Serializable {
                 return node.serializedCropNode(withChildren: withChildren)
             case let node as SKVideoNode:
                 return node.serializedVideoNode(withChildren: withChildren)
-//            case let node as SKEmitterNode:
-//                return node.serializedEmitterNode(withChildren: withChildren)
+            case let node as SKEmitterNode:
+                return node.serializedEmitterNode(withChildren: withChildren)
             default:
                 if #available(iOS 8.0, OSX 10.10, *) {
                     switch self {
@@ -107,8 +107,8 @@ extension SKNode: Updatable {
                 try node.updateCropNode(with: object)
             case let node as SKVideoNode:
                 try node.updateVideoNode(with: object)
-//            case let node as SKEmitterNode:
-//                try node.updateEmitterNode(with: object)
+            case let node as SKEmitterNode:
+                try node.updateEmitterNode(with: object)
             default:
                 if #available(OSX 10.10, *) {
                     switch self {
