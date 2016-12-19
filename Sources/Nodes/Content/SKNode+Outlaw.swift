@@ -63,8 +63,8 @@ extension SKNode: Serializable {
             default:
                 if #available(iOS 8.0, OSX 10.10, *) {
                     switch self {
-//                        case let node as SKLightNode:
-//                            return node.serializedLightNode(withChildren: withChildren)
+                        case let node as SKLightNode:
+                            return node.serializedLightNode(withChildren: withChildren)
 //                        case let node as SKFieldNode:
 //                            return node.serializedFieldNode(withChildren: withChildren)
                         default:
@@ -112,8 +112,8 @@ extension SKNode: Updatable {
             default:
                 if #available(OSX 10.10, *) {
                     switch self {
-//                    case let node as SKLightNode:
-//                        try node.updateLightNode(with: object)
+                        case let node as SKLightNode:
+                            try node.updateLightNode(with: object)
 //                    case let node as SKFieldNode:
 //                        try node.updateFieldNode(with: object)
                         default:
