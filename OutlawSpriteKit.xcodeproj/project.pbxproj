@@ -68,6 +68,7 @@
 		AEBDC28D1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC28B1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift */; };
 		AEBDC28E1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC28C1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift */; };
 		AEBDC2911E08A9E100EB1929 /* SKAudioNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC2901E08A9E100EB1929 /* SKAudioNode+Outlaw.swift */; };
+		AEBDC2941E08ACBC00EB1929 /* SKFieldNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDC2931E08ACBC00EB1929 /* SKFieldNode+Outlaw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		AEBDC28B1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEmitterNode+Outlaw.swift"; sourceTree = "<group>"; };
 		AEBDC28C1E08964B00EB1929 /* SKKeyframeSequence+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKKeyframeSequence+Outlaw.swift"; sourceTree = "<group>"; };
 		AEBDC2901E08A9E100EB1929 /* SKAudioNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAudioNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AEBDC2931E08ACBC00EB1929 /* SKFieldNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKFieldNode+Outlaw.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				AE837D0B1E07D9A700E31EAC /* Display */,
 				AEBDC2851E088C4B00EB1929 /* Lighting */,
 				AEBDC28A1E08964B00EB1929 /* Particles */,
+				AEBDC2921E08ACBC00EB1929 /* Physics */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -408,6 +411,14 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		AEBDC2921E08ACBC00EB1929 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDC2931E08ACBC00EB1929 /* SKFieldNode+Outlaw.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -523,6 +534,7 @@
 			files = (
 				AE837CE11E07B54E00E31EAC /* SKReachConstraints+Outlaw.swift in Sources */,
 				AE837D111E07D9A700E31EAC /* SKCropNode+Outlaw.swift in Sources */,
+				AEBDC2941E08ACBC00EB1929 /* SKFieldNode+Outlaw.swift in Sources */,
 				AE89D4DD1E067569003F5DE4 /* SKView+Outlaw.swift in Sources */,
 				AEBDC28D1E08964B00EB1929 /* SKEmitterNode+Outlaw.swift in Sources */,
 				AE89D49C1E065602003F5DE4 /* SKInterpolationMode+String.swift in Sources */,
