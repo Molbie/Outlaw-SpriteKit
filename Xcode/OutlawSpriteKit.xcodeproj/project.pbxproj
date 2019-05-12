@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE837D041E07D2B100E31EAC /* OutlawAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */; };
+		AE837D061E07D2B600E31EAC /* OutlawUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */; };
+		AE837D091E07D31600E31EAC /* OutlawAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D071E07D31600E31EAC /* OutlawAppKit.framework */; };
+		AE837D0A1E07D31600E31EAC /* OutlawUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE837D081E07D31600E31EAC /* OutlawUIKit.framework */; };
+		AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */; };
+		AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4681E0652DA003F5DE4 /* Outlaw.framework */; };
+		AE89D46C1E0652DA003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */; };
+		AE89D46D1E0652DA003F5DE4 /* OutlawSimd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */; };
+		AE89D4711E065336003F5DE4 /* Outlaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D46E1E065336003F5DE4 /* Outlaw.framework */; };
+		AE89D4721E065336003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */; };
+		AE89D4731E065336003F5DE4 /* OutlawSimd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE89D4701E065336003F5DE4 /* OutlawSimd.framework */; };
+		AE93BFB92287C00D008118D7 /* SKReachConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFA42287C00D008118D7 /* SKReachConstraintsTests.swift */; };
+		AE93BFBA2287C00D008118D7 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFA62287C00D008118D7 /* SKLabelHorizontalAlignmentModeTests.swift */; };
+		AE93BFBB2287C00D008118D7 /* SKTextureFilteringModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFA72287C00D008118D7 /* SKTextureFilteringModeTests.swift */; };
+		AE93BFBC2287C00D008118D7 /* SKParticleRenderOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFA82287C00D008118D7 /* SKParticleRenderOrderTests.swift */; };
+		AE93BFBD2287C00D008118D7 /* SKActionTimingModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFA92287C00D008118D7 /* SKActionTimingModeTests.swift */; };
+		AE93BFBE2287C00D008118D7 /* SKSceneScaleModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAA2287C00D008118D7 /* SKSceneScaleModeTests.swift */; };
+		AE93BFBF2287C00D008118D7 /* SKTransitionDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAB2287C00D008118D7 /* SKTransitionDirectionTests.swift */; };
+		AE93BFC02287C00D008118D7 /* SKLabelVerticalAlignmentModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAC2287C00D008118D7 /* SKLabelVerticalAlignmentModeTests.swift */; };
+		AE93BFC12287C00D008118D7 /* SKBlendModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAD2287C00D008118D7 /* SKBlendModeTests.swift */; };
+		AE93BFC22287C00D008118D7 /* SKUniformTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAE2287C00D008118D7 /* SKUniformTypeTests.swift */; };
+		AE93BFC32287C00D008118D7 /* SKAttributeTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFAF2287C00D008118D7 /* SKAttributeTypeTests.swift */; };
+		AE93BFC42287C00D008118D7 /* SKInterpolationModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB02287C00D008118D7 /* SKInterpolationModeTests.swift */; };
+		AE93BFC52287C00D008118D7 /* SKTileSetTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB12287C00D008118D7 /* SKTileSetTypeTests.swift */; };
+		AE93BFC62287C00D008118D7 /* SKTileDefinitionRotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB22287C00D008118D7 /* SKTileDefinitionRotationTests.swift */; };
+		AE93BFC72287C00D008118D7 /* SKRepeatModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB32287C00D008118D7 /* SKRepeatModeTests.swift */; };
+		AE93BFC82287C00D008118D7 /* SKPhysicsWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB52287C00D008118D7 /* SKPhysicsWorldTests.swift */; };
+		AE93BFC92287C00D008118D7 /* SKPhysicsBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB62287C00D008118D7 /* SKPhysicsBodyTests.swift */; };
+		AE93BFCA2287C00D008118D7 /* SKViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFB82287C00D008118D7 /* SKViewTests.swift */; };
+		AE93BFFF2287C018008118D7 /* SKReachConstraints+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFD02287C018008118D7 /* SKReachConstraints+Outlaw.swift */; };
+		AE93C0002287C018008118D7 /* SKEffectNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFD52287C018008118D7 /* SKEffectNode+Outlaw.swift */; };
+		AE93C0012287C018008118D7 /* SKScene+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFD62287C018008118D7 /* SKScene+Outlaw.swift */; };
+		AE93C0022287C018008118D7 /* SKNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFD72287C018008118D7 /* SKNode+Outlaw.swift */; };
+		AE93C0032287C018008118D7 /* SKKeyframeSequence+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFD92287C018008118D7 /* SKKeyframeSequence+Outlaw.swift */; };
+		AE93C0042287C018008118D7 /* SKEmitterNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFDA2287C018008118D7 /* SKEmitterNode+Outlaw.swift */; };
+		AE93C0052287C018008118D7 /* SKAudioNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFDD2287C018008118D7 /* SKAudioNode+Outlaw.swift */; };
+		AE93C0062287C018008118D7 /* SKLightNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE02287C018008118D7 /* SKLightNode+Outlaw.swift */; };
+		AE93C0072287C018008118D7 /* SKCameraNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE12287C018008118D7 /* SKCameraNode+Outlaw.swift */; };
+		AE93C0082287C018008118D7 /* SKLabelNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE32287C018008118D7 /* SKLabelNode+Outlaw.swift */; };
+		AE93C0092287C018008118D7 /* SKShapeNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE42287C018008118D7 /* SKShapeNode+Outlaw.swift */; };
+		AE93C00A2287C018008118D7 /* SKVideoNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE52287C018008118D7 /* SKVideoNode+Outlaw.swift */; };
+		AE93C00B2287C018008118D7 /* SKSpriteNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE62287C018008118D7 /* SKSpriteNode+Outlaw.swift */; };
+		AE93C00C2287C018008118D7 /* SKCropNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE72287C018008118D7 /* SKCropNode+Outlaw.swift */; };
+		AE93C00D2287C018008118D7 /* SKFieldNode+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFE92287C018008118D7 /* SKFieldNode+Outlaw.swift */; };
+		AE93C00E2287C018008118D7 /* SKParticleRenderOrder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFEB2287C018008118D7 /* SKParticleRenderOrder+String.swift */; };
+		AE93C00F2287C018008118D7 /* SKAttributeType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFEC2287C018008118D7 /* SKAttributeType+String.swift */; };
+		AE93C0102287C018008118D7 /* SKSceneScaleMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFED2287C018008118D7 /* SKSceneScaleMode+String.swift */; };
+		AE93C0112287C018008118D7 /* SKTileDefinitionRotation+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFEE2287C018008118D7 /* SKTileDefinitionRotation+String.swift */; };
+		AE93C0122287C018008118D7 /* SKTransitionDirection+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFEF2287C018008118D7 /* SKTransitionDirection+String.swift */; };
+		AE93C0132287C018008118D7 /* SKLabelVerticalAlignmentMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF02287C018008118D7 /* SKLabelVerticalAlignmentMode+String.swift */; };
+		AE93C0142287C018008118D7 /* SKRepeatMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF12287C018008118D7 /* SKRepeatMode+String.swift */; };
+		AE93C0152287C018008118D7 /* SKLabelHorizontalAlignmentMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF22287C018008118D7 /* SKLabelHorizontalAlignmentMode+String.swift */; };
+		AE93C0162287C018008118D7 /* SKUniformType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF32287C018008118D7 /* SKUniformType+String.swift */; };
+		AE93C0172287C018008118D7 /* SKActionTimingMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF42287C018008118D7 /* SKActionTimingMode+String.swift */; };
+		AE93C0182287C018008118D7 /* SKTileSetType+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF52287C018008118D7 /* SKTileSetType+String.swift */; };
+		AE93C0192287C018008118D7 /* SKBlendMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF62287C018008118D7 /* SKBlendMode+String.swift */; };
+		AE93C01A2287C018008118D7 /* SKInterpolationMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF72287C018008118D7 /* SKInterpolationMode+String.swift */; };
+		AE93C01B2287C018008118D7 /* SKTextureFilteringMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF82287C018008118D7 /* SKTextureFilteringMode+String.swift */; };
+		AE93C01C2287C018008118D7 /* SpriteKitTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFF92287C018008118D7 /* SpriteKitTypes.swift */; };
+		AE93C01D2287C018008118D7 /* SKPhysicsBody+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFFB2287C018008118D7 /* SKPhysicsBody+Outlaw.swift */; };
+		AE93C01E2287C018008118D7 /* SKPhysicsWorld+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFFC2287C018008118D7 /* SKPhysicsWorld+Outlaw.swift */; };
+		AE93C01F2287C018008118D7 /* SKView+Outlaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93BFFE2287C018008118D7 /* SKView+Outlaw.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE89D4571E065170003F5DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE89D4431E065170003F5DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE89D44B1E065170003F5DE4;
+			remoteInfo = OutlawSpriteKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D071E07D31600E31EAC /* OutlawAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE837D081E07D31600E31EAC /* OutlawUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OutlawSpriteKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4551E065170003F5DE4 /* OutlawSpriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutlawSpriteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4681E0652DA003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46E1E065336003F5DE4 /* Outlaw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Outlaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawCoreGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE89D4701E065336003F5DE4 /* OutlawSimd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OutlawSimd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE93BF8C2287BFA5008118D7 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile.resolved; path = ../Cartfile.resolved; sourceTree = "<group>"; };
+		AE93BF8D2287BFA5008118D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AE93BF8E2287BFA5008118D7 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		AE93BF8F2287BFA5008118D7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
+		AE93BF902287BFA5008118D7 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		AE93BF912287BFC3008118D7 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
+		AE93BF922287BFCB008118D7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		AE93BF942287BFE9008118D7 /* Molbie-Conditionals.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Molbie-Conditionals.xcconfig"; sourceTree = "<group>"; };
+		AE93BF952287BFE9008118D7 /* Molbie-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Molbie-Release.xcconfig"; sourceTree = "<group>"; };
+		AE93BF962287BFE9008118D7 /* Molbie-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Molbie-Debug.xcconfig"; sourceTree = "<group>"; };
+		AE93BF982287BFE9008118D7 /* OutlawSpriteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlawSpriteKit.h; sourceTree = "<group>"; };
+		AE93BF992287BFE9008118D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE93BF9B2287BFE9008118D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE93BF9C2287BFE9008118D7 /* Molbie-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Molbie-Base.xcconfig"; sourceTree = "<group>"; };
+		AE93BFA42287C00D008118D7 /* SKReachConstraintsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKReachConstraintsTests.swift; sourceTree = "<group>"; };
+		AE93BFA62287C00D008118D7 /* SKLabelHorizontalAlignmentModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLabelHorizontalAlignmentModeTests.swift; sourceTree = "<group>"; };
+		AE93BFA72287C00D008118D7 /* SKTextureFilteringModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureFilteringModeTests.swift; sourceTree = "<group>"; };
+		AE93BFA82287C00D008118D7 /* SKParticleRenderOrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKParticleRenderOrderTests.swift; sourceTree = "<group>"; };
+		AE93BFA92287C00D008118D7 /* SKActionTimingModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKActionTimingModeTests.swift; sourceTree = "<group>"; };
+		AE93BFAA2287C00D008118D7 /* SKSceneScaleModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSceneScaleModeTests.swift; sourceTree = "<group>"; };
+		AE93BFAB2287C00D008118D7 /* SKTransitionDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTransitionDirectionTests.swift; sourceTree = "<group>"; };
+		AE93BFAC2287C00D008118D7 /* SKLabelVerticalAlignmentModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLabelVerticalAlignmentModeTests.swift; sourceTree = "<group>"; };
+		AE93BFAD2287C00D008118D7 /* SKBlendModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBlendModeTests.swift; sourceTree = "<group>"; };
+		AE93BFAE2287C00D008118D7 /* SKUniformTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUniformTypeTests.swift; sourceTree = "<group>"; };
+		AE93BFAF2287C00D008118D7 /* SKAttributeTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKAttributeTypeTests.swift; sourceTree = "<group>"; };
+		AE93BFB02287C00D008118D7 /* SKInterpolationModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKInterpolationModeTests.swift; sourceTree = "<group>"; };
+		AE93BFB12287C00D008118D7 /* SKTileSetTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTileSetTypeTests.swift; sourceTree = "<group>"; };
+		AE93BFB22287C00D008118D7 /* SKTileDefinitionRotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTileDefinitionRotationTests.swift; sourceTree = "<group>"; };
+		AE93BFB32287C00D008118D7 /* SKRepeatModeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRepeatModeTests.swift; sourceTree = "<group>"; };
+		AE93BFB52287C00D008118D7 /* SKPhysicsWorldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsWorldTests.swift; sourceTree = "<group>"; };
+		AE93BFB62287C00D008118D7 /* SKPhysicsBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhysicsBodyTests.swift; sourceTree = "<group>"; };
+		AE93BFB82287C00D008118D7 /* SKViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKViewTests.swift; sourceTree = "<group>"; };
+		AE93BFD02287C018008118D7 /* SKReachConstraints+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKReachConstraints+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFD52287C018008118D7 /* SKEffectNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEffectNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFD62287C018008118D7 /* SKScene+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFD72287C018008118D7 /* SKNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFD92287C018008118D7 /* SKKeyframeSequence+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKKeyframeSequence+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFDA2287C018008118D7 /* SKEmitterNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKEmitterNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFDD2287C018008118D7 /* SKAudioNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAudioNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE02287C018008118D7 /* SKLightNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLightNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE12287C018008118D7 /* SKCameraNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKCameraNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE32287C018008118D7 /* SKLabelNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLabelNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE42287C018008118D7 /* SKShapeNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKShapeNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE52287C018008118D7 /* SKVideoNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKVideoNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE62287C018008118D7 /* SKSpriteNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE72287C018008118D7 /* SKCropNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKCropNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFE92287C018008118D7 /* SKFieldNode+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKFieldNode+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFEB2287C018008118D7 /* SKParticleRenderOrder+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKParticleRenderOrder+String.swift"; sourceTree = "<group>"; };
+		AE93BFEC2287C018008118D7 /* SKAttributeType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAttributeType+String.swift"; sourceTree = "<group>"; };
+		AE93BFED2287C018008118D7 /* SKSceneScaleMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSceneScaleMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFEE2287C018008118D7 /* SKTileDefinitionRotation+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTileDefinitionRotation+String.swift"; sourceTree = "<group>"; };
+		AE93BFEF2287C018008118D7 /* SKTransitionDirection+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTransitionDirection+String.swift"; sourceTree = "<group>"; };
+		AE93BFF02287C018008118D7 /* SKLabelVerticalAlignmentMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLabelVerticalAlignmentMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF12287C018008118D7 /* SKRepeatMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKRepeatMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF22287C018008118D7 /* SKLabelHorizontalAlignmentMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKLabelHorizontalAlignmentMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF32287C018008118D7 /* SKUniformType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKUniformType+String.swift"; sourceTree = "<group>"; };
+		AE93BFF42287C018008118D7 /* SKActionTimingMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKActionTimingMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF52287C018008118D7 /* SKTileSetType+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTileSetType+String.swift"; sourceTree = "<group>"; };
+		AE93BFF62287C018008118D7 /* SKBlendMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKBlendMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF72287C018008118D7 /* SKInterpolationMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKInterpolationMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF82287C018008118D7 /* SKTextureFilteringMode+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTextureFilteringMode+String.swift"; sourceTree = "<group>"; };
+		AE93BFF92287C018008118D7 /* SpriteKitTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitTypes.swift; sourceTree = "<group>"; };
+		AE93BFFB2287C018008118D7 /* SKPhysicsBody+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFFC2287C018008118D7 /* SKPhysicsWorld+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsWorld+Outlaw.swift"; sourceTree = "<group>"; };
+		AE93BFFE2287C018008118D7 /* SKView+Outlaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKView+Outlaw.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE89D4481E065170003F5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE837D061E07D2B600E31EAC /* OutlawUIKit.framework in Frameworks */,
+				AE837D041E07D2B100E31EAC /* OutlawAppKit.framework in Frameworks */,
+				AE89D46B1E0652DA003F5DE4 /* Outlaw.framework in Frameworks */,
+				AE89D46C1E0652DA003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */,
+				AE89D46D1E0652DA003F5DE4 /* OutlawSimd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE89D4521E065170003F5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE837D091E07D31600E31EAC /* OutlawAppKit.framework in Frameworks */,
+				AE837D0A1E07D31600E31EAC /* OutlawUIKit.framework in Frameworks */,
+				AE89D4711E065336003F5DE4 /* Outlaw.framework in Frameworks */,
+				AE89D4721E065336003F5DE4 /* OutlawCoreGraphics.framework in Frameworks */,
+				AE89D4731E065336003F5DE4 /* OutlawSimd.framework in Frameworks */,
+				AE89D4561E065170003F5DE4 /* OutlawSpriteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE89D4421E065170003F5DE4 = {
+			isa = PBXGroup;
+			children = (
+				AE93BFCB2287C018008118D7 /* Sources */,
+				AE93BFA02287C00D008118D7 /* Tests */,
+				AE93BF932287BFE9008118D7 /* Xcode */,
+				AE93BF8B2287BF93008118D7 /* Project */,
+				AE89D44D1E065170003F5DE4 /* Products */,
+				AE89D4671E0652DA003F5DE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE89D44D1E065170003F5DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */,
+				AE89D4551E065170003F5DE4 /* OutlawSpriteKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE89D4671E0652DA003F5DE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE837D071E07D31600E31EAC /* OutlawAppKit.framework */,
+				AE837D081E07D31600E31EAC /* OutlawUIKit.framework */,
+				AE837D051E07D2B600E31EAC /* OutlawUIKit.framework */,
+				AE837D031E07D2B100E31EAC /* OutlawAppKit.framework */,
+				AE89D46E1E065336003F5DE4 /* Outlaw.framework */,
+				AE89D46F1E065336003F5DE4 /* OutlawCoreGraphics.framework */,
+				AE89D4701E065336003F5DE4 /* OutlawSimd.framework */,
+				AE89D4681E0652DA003F5DE4 /* Outlaw.framework */,
+				AE89D4691E0652DA003F5DE4 /* OutlawCoreGraphics.framework */,
+				AE89D46A1E0652DA003F5DE4 /* OutlawSimd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE93BF8B2287BF93008118D7 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BF902287BFA5008118D7 /* Cartfile */,
+				AE93BF8C2287BFA5008118D7 /* Cartfile.resolved */,
+				AE93BF8E2287BFA5008118D7 /* Package.swift */,
+				AE93BF912287BFC3008118D7 /* .swift-version */,
+				AE93BF922287BFCB008118D7 /* .gitignore */,
+				AE93BF8F2287BFA5008118D7 /* LICENSE.md */,
+				AE93BF8D2287BFA5008118D7 /* README.md */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		AE93BF932287BFE9008118D7 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BF972287BFE9008118D7 /* OutlawSpriteKit */,
+				AE93BF9A2287BFE9008118D7 /* OutlawSpriteKitTests */,
+				AE93BF9C2287BFE9008118D7 /* Molbie-Base.xcconfig */,
+				AE93BF942287BFE9008118D7 /* Molbie-Conditionals.xcconfig */,
+				AE93BF962287BFE9008118D7 /* Molbie-Debug.xcconfig */,
+				AE93BF952287BFE9008118D7 /* Molbie-Release.xcconfig */,
+			);
+			name = Xcode;
+			sourceTree = "<group>";
+		};
+		AE93BF972287BFE9008118D7 /* OutlawSpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BF982287BFE9008118D7 /* OutlawSpriteKit.h */,
+				AE93BF992287BFE9008118D7 /* Info.plist */,
+			);
+			path = OutlawSpriteKit;
+			sourceTree = "<group>";
+		};
+		AE93BF9A2287BFE9008118D7 /* OutlawSpriteKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BF9B2287BFE9008118D7 /* Info.plist */,
+			);
+			path = OutlawSpriteKitTests;
+			sourceTree = "<group>";
+		};
+		AE93BFA02287C00D008118D7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFA12287C00D008118D7 /* OutlawSpriteKitTests */,
+			);
+			name = Tests;
+			path = ../Tests;
+			sourceTree = "<group>";
+		};
+		AE93BFA12287C00D008118D7 /* OutlawSpriteKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFA22287C00D008118D7 /* Nodes */,
+				AE93BFA52287C00D008118D7 /* Enums */,
+				AE93BFB42287C00D008118D7 /* Physics */,
+				AE93BFB72287C00D008118D7 /* Views */,
+			);
+			path = OutlawSpriteKitTests;
+			sourceTree = "<group>";
+		};
+		AE93BFA22287C00D008118D7 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFA32287C00D008118D7 /* Constraints */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		AE93BFA32287C00D008118D7 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFA42287C00D008118D7 /* SKReachConstraintsTests.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		AE93BFA52287C00D008118D7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFA62287C00D008118D7 /* SKLabelHorizontalAlignmentModeTests.swift */,
+				AE93BFA72287C00D008118D7 /* SKTextureFilteringModeTests.swift */,
+				AE93BFA82287C00D008118D7 /* SKParticleRenderOrderTests.swift */,
+				AE93BFA92287C00D008118D7 /* SKActionTimingModeTests.swift */,
+				AE93BFAA2287C00D008118D7 /* SKSceneScaleModeTests.swift */,
+				AE93BFAB2287C00D008118D7 /* SKTransitionDirectionTests.swift */,
+				AE93BFAC2287C00D008118D7 /* SKLabelVerticalAlignmentModeTests.swift */,
+				AE93BFAD2287C00D008118D7 /* SKBlendModeTests.swift */,
+				AE93BFAE2287C00D008118D7 /* SKUniformTypeTests.swift */,
+				AE93BFAF2287C00D008118D7 /* SKAttributeTypeTests.swift */,
+				AE93BFB02287C00D008118D7 /* SKInterpolationModeTests.swift */,
+				AE93BFB12287C00D008118D7 /* SKTileSetTypeTests.swift */,
+				AE93BFB22287C00D008118D7 /* SKTileDefinitionRotationTests.swift */,
+				AE93BFB32287C00D008118D7 /* SKRepeatModeTests.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		AE93BFB42287C00D008118D7 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFB52287C00D008118D7 /* SKPhysicsWorldTests.swift */,
+				AE93BFB62287C00D008118D7 /* SKPhysicsBodyTests.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		AE93BFB72287C00D008118D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFB82287C00D008118D7 /* SKViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE93BFCB2287C018008118D7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFCC2287C018008118D7 /* OutlawSpriteKit */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		AE93BFCC2287C018008118D7 /* OutlawSpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFCD2287C018008118D7 /* Nodes */,
+				AE93BFEA2287C018008118D7 /* Enums */,
+				AE93BFFA2287C018008118D7 /* Physics */,
+				AE93BFFD2287C018008118D7 /* Views */,
+				AE93BFF92287C018008118D7 /* SpriteKitTypes.swift */,
+			);
+			path = OutlawSpriteKit;
+			sourceTree = "<group>";
+		};
+		AE93BFCD2287C018008118D7 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFCE2287C018008118D7 /* Textures */,
+				AE93BFCF2287C018008118D7 /* Constraints */,
+				AE93BFD12287C018008118D7 /* Warping */,
+				AE93BFD22287C018008118D7 /* SceneKit */,
+				AE93BFD32287C018008118D7 /* Animation */,
+				AE93BFD42287C018008118D7 /* Content */,
+				AE93BFD82287C018008118D7 /* Particles */,
+				AE93BFDB2287C018008118D7 /* Tiles */,
+				AE93BFDC2287C018008118D7 /* Audio */,
+				AE93BFDE2287C018008118D7 /* Shaders */,
+				AE93BFDF2287C018008118D7 /* Lighting */,
+				AE93BFE22287C018008118D7 /* Display */,
+				AE93BFE82287C018008118D7 /* Physics */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		AE93BFCE2287C018008118D7 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		AE93BFCF2287C018008118D7 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFD02287C018008118D7 /* SKReachConstraints+Outlaw.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		AE93BFD12287C018008118D7 /* Warping */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Warping;
+			sourceTree = "<group>";
+		};
+		AE93BFD22287C018008118D7 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SceneKit;
+			sourceTree = "<group>";
+		};
+		AE93BFD32287C018008118D7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		AE93BFD42287C018008118D7 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFD52287C018008118D7 /* SKEffectNode+Outlaw.swift */,
+				AE93BFD62287C018008118D7 /* SKScene+Outlaw.swift */,
+				AE93BFD72287C018008118D7 /* SKNode+Outlaw.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		AE93BFD82287C018008118D7 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFD92287C018008118D7 /* SKKeyframeSequence+Outlaw.swift */,
+				AE93BFDA2287C018008118D7 /* SKEmitterNode+Outlaw.swift */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		AE93BFDB2287C018008118D7 /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tiles;
+			sourceTree = "<group>";
+		};
+		AE93BFDC2287C018008118D7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFDD2287C018008118D7 /* SKAudioNode+Outlaw.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		AE93BFDE2287C018008118D7 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		AE93BFDF2287C018008118D7 /* Lighting */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFE02287C018008118D7 /* SKLightNode+Outlaw.swift */,
+				AE93BFE12287C018008118D7 /* SKCameraNode+Outlaw.swift */,
+			);
+			path = Lighting;
+			sourceTree = "<group>";
+		};
+		AE93BFE22287C018008118D7 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFE32287C018008118D7 /* SKLabelNode+Outlaw.swift */,
+				AE93BFE42287C018008118D7 /* SKShapeNode+Outlaw.swift */,
+				AE93BFE52287C018008118D7 /* SKVideoNode+Outlaw.swift */,
+				AE93BFE62287C018008118D7 /* SKSpriteNode+Outlaw.swift */,
+				AE93BFE72287C018008118D7 /* SKCropNode+Outlaw.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		AE93BFE82287C018008118D7 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFE92287C018008118D7 /* SKFieldNode+Outlaw.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		AE93BFEA2287C018008118D7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFEB2287C018008118D7 /* SKParticleRenderOrder+String.swift */,
+				AE93BFEC2287C018008118D7 /* SKAttributeType+String.swift */,
+				AE93BFED2287C018008118D7 /* SKSceneScaleMode+String.swift */,
+				AE93BFEE2287C018008118D7 /* SKTileDefinitionRotation+String.swift */,
+				AE93BFEF2287C018008118D7 /* SKTransitionDirection+String.swift */,
+				AE93BFF02287C018008118D7 /* SKLabelVerticalAlignmentMode+String.swift */,
+				AE93BFF12287C018008118D7 /* SKRepeatMode+String.swift */,
+				AE93BFF22287C018008118D7 /* SKLabelHorizontalAlignmentMode+String.swift */,
+				AE93BFF32287C018008118D7 /* SKUniformType+String.swift */,
+				AE93BFF42287C018008118D7 /* SKActionTimingMode+String.swift */,
+				AE93BFF52287C018008118D7 /* SKTileSetType+String.swift */,
+				AE93BFF62287C018008118D7 /* SKBlendMode+String.swift */,
+				AE93BFF72287C018008118D7 /* SKInterpolationMode+String.swift */,
+				AE93BFF82287C018008118D7 /* SKTextureFilteringMode+String.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		AE93BFFA2287C018008118D7 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFFB2287C018008118D7 /* SKPhysicsBody+Outlaw.swift */,
+				AE93BFFC2287C018008118D7 /* SKPhysicsWorld+Outlaw.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		AE93BFFD2287C018008118D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE93BFFE2287C018008118D7 /* SKView+Outlaw.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AE89D4491E065170003F5DE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AE89D44B1E065170003F5DE4 /* OutlawSpriteKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE89D4601E065170003F5DE4 /* Build configuration list for PBXNativeTarget "OutlawSpriteKit" */;
+			buildPhases = (
+				AE89D4471E065170003F5DE4 /* Sources */,
+				AE89D4481E065170003F5DE4 /* Frameworks */,
+				AE89D4491E065170003F5DE4 /* Headers */,
+				AE89D44A1E065170003F5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OutlawSpriteKit;
+			productName = OutlawSpriteKit;
+			productReference = AE89D44C1E065170003F5DE4 /* OutlawSpriteKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE89D4541E065170003F5DE4 /* OutlawSpriteKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE89D4631E065170003F5DE4 /* Build configuration list for PBXNativeTarget "OutlawSpriteKitTests" */;
+			buildPhases = (
+				AE89D4511E065170003F5DE4 /* Sources */,
+				AE89D4521E065170003F5DE4 /* Frameworks */,
+				AE89D4531E065170003F5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE89D4581E065170003F5DE4 /* PBXTargetDependency */,
+			);
+			name = OutlawSpriteKitTests;
+			productName = OutlawSpriteKitTests;
+			productReference = AE89D4551E065170003F5DE4 /* OutlawSpriteKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE89D4431E065170003F5DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Molbie LLC";
+				TargetAttributes = {
+					AE89D44B1E065170003F5DE4 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PWN4RN68X5;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					AE89D4541E065170003F5DE4 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PWN4RN68X5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AE89D4461E065170003F5DE4 /* Build configuration list for PBXProject "OutlawSpriteKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = AE89D4421E065170003F5DE4;
+			productRefGroup = AE89D44D1E065170003F5DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE89D44B1E065170003F5DE4 /* OutlawSpriteKit */,
+				AE89D4541E065170003F5DE4 /* OutlawSpriteKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE89D44A1E065170003F5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE89D4531E065170003F5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE89D4471E065170003F5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE93C0042287C018008118D7 /* SKEmitterNode+Outlaw.swift in Sources */,
+				AE93C0102287C018008118D7 /* SKSceneScaleMode+String.swift in Sources */,
+				AE93C0112287C018008118D7 /* SKTileDefinitionRotation+String.swift in Sources */,
+				AE93C00E2287C018008118D7 /* SKParticleRenderOrder+String.swift in Sources */,
+				AE93C0052287C018008118D7 /* SKAudioNode+Outlaw.swift in Sources */,
+				AE93C0002287C018008118D7 /* SKEffectNode+Outlaw.swift in Sources */,
+				AE93C01E2287C018008118D7 /* SKPhysicsWorld+Outlaw.swift in Sources */,
+				AE93C0072287C018008118D7 /* SKCameraNode+Outlaw.swift in Sources */,
+				AE93C0182287C018008118D7 /* SKTileSetType+String.swift in Sources */,
+				AE93C01F2287C018008118D7 /* SKView+Outlaw.swift in Sources */,
+				AE93C0032287C018008118D7 /* SKKeyframeSequence+Outlaw.swift in Sources */,
+				AE93C00D2287C018008118D7 /* SKFieldNode+Outlaw.swift in Sources */,
+				AE93C0192287C018008118D7 /* SKBlendMode+String.swift in Sources */,
+				AE93C00A2287C018008118D7 /* SKVideoNode+Outlaw.swift in Sources */,
+				AE93C0092287C018008118D7 /* SKShapeNode+Outlaw.swift in Sources */,
+				AE93C0022287C018008118D7 /* SKNode+Outlaw.swift in Sources */,
+				AE93C00B2287C018008118D7 /* SKSpriteNode+Outlaw.swift in Sources */,
+				AE93C0152287C018008118D7 /* SKLabelHorizontalAlignmentMode+String.swift in Sources */,
+				AE93C01D2287C018008118D7 /* SKPhysicsBody+Outlaw.swift in Sources */,
+				AE93C0132287C018008118D7 /* SKLabelVerticalAlignmentMode+String.swift in Sources */,
+				AE93C01C2287C018008118D7 /* SpriteKitTypes.swift in Sources */,
+				AE93C01B2287C018008118D7 /* SKTextureFilteringMode+String.swift in Sources */,
+				AE93C0162287C018008118D7 /* SKUniformType+String.swift in Sources */,
+				AE93C0122287C018008118D7 /* SKTransitionDirection+String.swift in Sources */,
+				AE93BFFF2287C018008118D7 /* SKReachConstraints+Outlaw.swift in Sources */,
+				AE93C00F2287C018008118D7 /* SKAttributeType+String.swift in Sources */,
+				AE93C0062287C018008118D7 /* SKLightNode+Outlaw.swift in Sources */,
+				AE93C0142287C018008118D7 /* SKRepeatMode+String.swift in Sources */,
+				AE93C0082287C018008118D7 /* SKLabelNode+Outlaw.swift in Sources */,
+				AE93C01A2287C018008118D7 /* SKInterpolationMode+String.swift in Sources */,
+				AE93C0012287C018008118D7 /* SKScene+Outlaw.swift in Sources */,
+				AE93C0172287C018008118D7 /* SKActionTimingMode+String.swift in Sources */,
+				AE93C00C2287C018008118D7 /* SKCropNode+Outlaw.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE89D4511E065170003F5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE93BFC82287C00D008118D7 /* SKPhysicsWorldTests.swift in Sources */,
+				AE93BFC62287C00D008118D7 /* SKTileDefinitionRotationTests.swift in Sources */,
+				AE93BFBD2287C00D008118D7 /* SKActionTimingModeTests.swift in Sources */,
+				AE93BFC02287C00D008118D7 /* SKLabelVerticalAlignmentModeTests.swift in Sources */,
+				AE93BFC22287C00D008118D7 /* SKUniformTypeTests.swift in Sources */,
+				AE93BFC52287C00D008118D7 /* SKTileSetTypeTests.swift in Sources */,
+				AE93BFBC2287C00D008118D7 /* SKParticleRenderOrderTests.swift in Sources */,
+				AE93BFC32287C00D008118D7 /* SKAttributeTypeTests.swift in Sources */,
+				AE93BFCA2287C00D008118D7 /* SKViewTests.swift in Sources */,
+				AE93BFBE2287C00D008118D7 /* SKSceneScaleModeTests.swift in Sources */,
+				AE93BFC72287C00D008118D7 /* SKRepeatModeTests.swift in Sources */,
+				AE93BFB92287C00D008118D7 /* SKReachConstraintsTests.swift in Sources */,
+				AE93BFBA2287C00D008118D7 /* SKLabelHorizontalAlignmentModeTests.swift in Sources */,
+				AE93BFBF2287C00D008118D7 /* SKTransitionDirectionTests.swift in Sources */,
+				AE93BFC12287C00D008118D7 /* SKBlendModeTests.swift in Sources */,
+				AE93BFC92287C00D008118D7 /* SKPhysicsBodyTests.swift in Sources */,
+				AE93BFBB2287C00D008118D7 /* SKTextureFilteringModeTests.swift in Sources */,
+				AE93BFC42287C00D008118D7 /* SKInterpolationModeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE89D4581E065170003F5DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE89D44B1E065170003F5DE4 /* OutlawSpriteKit */;
+			targetProxy = AE89D4571E065170003F5DE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AE89D45E1E065170003F5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93BF962287BFE9008118D7 /* Molbie-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AE89D45F1E065170003F5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93BF952287BFE9008118D7 /* Molbie-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		AE89D4611E065170003F5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AE89D4621E065170003F5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		AE89D4641E065170003F5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AE89D4651E065170003F5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE89D4461E065170003F5DE4 /* Build configuration list for PBXProject "OutlawSpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE89D45E1E065170003F5DE4 /* Debug */,
+				AE89D45F1E065170003F5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE89D4601E065170003F5DE4 /* Build configuration list for PBXNativeTarget "OutlawSpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE89D4611E065170003F5DE4 /* Debug */,
+				AE89D4621E065170003F5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE89D4631E065170003F5DE4 /* Build configuration list for PBXNativeTarget "OutlawSpriteKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE89D4641E065170003F5DE4 /* Debug */,
+				AE89D4651E065170003F5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE89D4431E065170003F5DE4 /* Project object */;
+}
